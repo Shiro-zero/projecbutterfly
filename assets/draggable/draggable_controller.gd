@@ -3,7 +3,7 @@ extends Node2D
 
 const COLLISION_MASK_DRAGGABLE = 1
 const COLLISION_MASK_FEUILLE = 2
-const COLLISION_MASK_STAMP_DOCK = 3
+const COLLISION_MASK_STAMP_DOCK = 4
 const DRAGGABLE_HOVER = Vector2(1.1, 1.1)
 const DRAGGABLE_HOVER_OFF = Vector2(1, 1)
 
@@ -85,10 +85,12 @@ func end_drag():
 				var dock = raycast_check(COLLISION_MASK_STAMP_DOCK)
 				if dock:
 					print(dock)
-					#if dock.color == "green" && draggable_dragged.is_accepted_stamp:
-						#pass
-					#else:
-						#pass
+					if dock.color == "green" && draggable_dragged.is_accepted_stamp:
+						draggable_dragged.is_charged = true
+						print('recharge vert')
+					elif dock.color == "red" && !draggable_dragged.is_accepted_stamp:
+						draggable_dragged.is_charged = true
+						print('recharge rouge')
 					pass
 					
 					

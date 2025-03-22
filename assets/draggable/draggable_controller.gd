@@ -102,6 +102,7 @@ func end_drag():
 			var basket = raycast_check(COLLISION_MASK_BASKET)
 			if basket:
 				print("basket existe")
+				#si il y a un stamp
 				if draggable_dragged.is_accepted != null:
 					basket.drop_feuille_in_basket_animation(draggable_dragged)
 					#desactive la collision

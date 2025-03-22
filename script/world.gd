@@ -9,3 +9,7 @@ func spawn_loi(n:int):
 		$DraggableController.add_child(temp)
 		temp.position=Vector2(800,400)
 		temp.rotation=randf_range(-.05, .05)
+
+
+func _on_accueil_pressed() -> void:
+	get_tree().change_scene_to_file("res://Menu.tscn")

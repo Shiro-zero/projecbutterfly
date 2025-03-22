@@ -66,6 +66,9 @@ custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Quitter"
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Jouer" to="." method="_on_jouer_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Crédits" to="." method="_on_crédits_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Mode Infini" to="." method="_on_mode_infini_pressed"]

@@ -3,7 +3,7 @@ extends Node2D
 
 const COLLISION_MASK_DRAGGABLE = 1
 const COLLISION_MASK_FEUILLE = 2
-const COLLISION_MASK_STAMP_SLOT = 3
+const COLLISION_MASK_STAMP_DOCK = 3
 const DRAGGABLE_HOVER = Vector2(1.1, 1.1)
 const DRAGGABLE_HOVER_OFF = Vector2(1, 1)
 
@@ -81,6 +81,17 @@ func end_drag():
 			if feuille:
 				print("stamp feuille")
 				draggable_dragged.stamp(feuille)
+			else:
+				var dock = raycast_check(COLLISION_MASK_STAMP_DOCK)
+				if dock:
+					print(dock)
+					#if dock.color == "green" && draggable_dragged.is_accepted_stamp:
+						#pass
+					#else:
+						#pass
+					pass
+					
+					
 		draggable_dragged = null
 		#ajouter logique de relache ici vérification d'ou il a été relaché
 		
@@ -95,7 +106,8 @@ func on_draggable_hover_off():
 	print("rétrécit")
 	is_draggable_hovering = false
 	highlight_draggable(draggable, false)
-		
+	
+
 func highlight_draggable(draggable, hover: bool):
 	#print(draggable)
 	if hover:

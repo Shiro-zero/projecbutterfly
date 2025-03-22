@@ -16,3 +16,8 @@ func stamp(feuille):
 		feuille.add_child(mark)
 		mark.global_position = global_position
 		feuille.is_accepted = is_accepted_stamp
+		is_charged = false
+
+
+func recharge_stamp():
+	is_charged = true

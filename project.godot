@@ -26,10 +26,6 @@ feuille=""
 
 [gui]
 
-theme/custom_font="uid://dhdwc7iqg4gj0"
-
-[gui]
-
 theme/custom_font="uid://bvws4xtih6ysl"
 
 [rendering]

@@ -1,12 +1,14 @@
 extends Node
 
-func generate_text():
+func generate_text(i : int):
+	return(read("res://assets/text/tbody.json")[str(Global.day)][str(i)])
+
+func generate_title(i : int):
+	return(read("res://assets/text/titre.json")[str(Global.day)][(str(i))])
+
+func generate_stat(i : int):
+	return(read("res://assets/text/stats.json")[str(Global.day)][(str(i))])
 	
-	return(read("res://assets/text/tbody.json")[str(randi() % 3)][str(randi() % 3)])
-
-func generate_title():
-	return(read("res://assets/text/titre.json")[str(randi() % 3)][str(randi() % 3)])
-
 func read(file_path):
 	# Check if the file exists
 	if FileAccess.file_exists(file_path):
@@ -20,7 +22,6 @@ func read(file_path):
 			# Create an instance of JSON
 			var json_object = JSON.parse_string(json_data)
 
-			
 			return json_object
 	else:
 		print("File does not exist.")

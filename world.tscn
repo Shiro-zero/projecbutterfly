@@ -28,66 +28,56 @@ color = "red"
 position = Vector2(255, 912)
 
 [node name="Stamp2" parent="DraggableController" instance=ExtResource("3_aqk2v")]
-position = Vector2(453, 910)
+position = Vector2(357, 565)
 is_accepted_stamp = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(956, 542)
 
-[node name="Panel" type="Panel" parent="."]
-self_modulate = Color(1, 0, 1, 1)
-layout_mode = 0
-offset_left = 1663.0
-offset_top = 6.0
-offset_right = 1922.0
-offset_bottom = 261.0
+[node name="Stats" type="CanvasLayer" parent="."]
 
-[node name="Stress" parent="Panel" instance=ExtResource("5_dwbse")]
-layout_mode = 1
+[node name="Stress" parent="Stats" instance=ExtResource("5_dwbse")]
 offset_left = 7.0
 offset_top = 2.0
-offset_right = -3.0
-offset_bottom = -177.0
+offset_right = -902.0
+offset_bottom = -578.0
 nom = "Stress"
 value = 20
 
-[node name="Fatigue" parent="Panel" instance=ExtResource("5_dwbse")]
-layout_mode = 1
+[node name="Fatigue" parent="Stats" instance=ExtResource("5_dwbse")]
 offset_left = 10.0
 offset_top = 66.0
-offset_right = -11.0
-offset_bottom = -117.0
+offset_right = -903.0
+offset_bottom = -515.0
 nom = "Fatigue"
 value = 5
 color = "ad00a2"
 
-[node name="Mr_President" parent="Panel" instance=ExtResource("5_dwbse")]
-layout_mode = 1
+[node name="Mr_President" parent="Stats" instance=ExtResource("5_dwbse")]
 offset_left = 9.0
 offset_top = 124.0
-offset_right = -7.0
-offset_bottom = -59.0
+offset_right = -902.0
+offset_bottom = -460.0
 nom = "Mr. President"
 value = 70
 color = "d81f29"
 
-[node name="Opinion Publique" parent="Panel" instance=ExtResource("5_dwbse")]
-layout_mode = 1
+[node name="Opinion Publique" parent="Stats" instance=ExtResource("5_dwbse")]
 offset_left = 11.0
 offset_top = 183.0
-offset_right = -8.0
-offset_bottom = 3.0
+offset_right = -895.0
+offset_bottom = -396.0
 nom = "Opinion Publique"
 value = 50
 color = "00aef3"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Accueil_btn" type="CanvasLayer" parent="."]
 
-[node name="Accueil" type="Button" parent="CanvasLayer"]
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 59.0
-offset_bottom = 59.0
+[node name="Accueil" type="Button" parent="Accueil_btn"]
+offset_left = 13.0
+offset_top = 262.0
+offset_right = 69.0
+offset_bottom = 318.0
 icon = ExtResource("5_036b0")
 metadata/_edit_use_anchors_ = true
 
@@ -98,4 +88,4 @@ scale = Vector2(2.5013, 1.98214)
 texture = ExtResource("7_pkg7o")
 metadata/_edit_lock_ = true
 
-[connection signal="pressed" from="CanvasLayer/Accueil" to="." method="_on_accueil_pressed"]
+[connection signal="pressed" from="Accueil_btn/Accueil" to="." method="_on_accueil_pressed"]

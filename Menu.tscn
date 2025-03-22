@@ -16,31 +16,31 @@ grow_vertical = 2
 script = ExtResource("1_uubjt")
 metadata/_edit_lock_ = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 713.0
-offset_top = 409.0
-offset_right = 1209.0
-offset_bottom = 733.0
+offset_right = 1152.0
+offset_bottom = 648.0
 color = Color(0.512023, 0.535367, 0.570889, 1)
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(1152, 0)
-layout_mode = 2
-offset_left = 383.0
-offset_top = 451.0
-offset_right = 1535.0
-offset_bottom = 501.0
+layout_mode = 0
+offset_top = 175.0
+offset_right = 1152.0
+offset_bottom = 225.0
 text = "Project Butterfly"
 label_settings = SubResource("LabelSettings_lthh4")
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 776.0
-offset_top = 276.0
-offset_right = 1142.0
-offset_bottom = 924.0
+offset_left = 393.0
+offset_top = 51.0
+offset_right = 759.0
+offset_bottom = 699.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -56,6 +56,11 @@ text = "Jouer"
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Crédits"
+
+[node name="Mode Infini" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Mode Infini"
 
 [node name="Quitter" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -75,4 +80,5 @@ metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Jouer" to="." method="_on_jouer_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Crédits" to="." method="_on_crédits_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Mode Infini" to="." method="_on_mode_infini_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]

@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://cia31jihqbj7t"]
+
+[ext_resource type="Script" uid="uid://bmy4c6l2igtmt" path="res://menu.gd" id="1_uubjt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lthh4"]
+font_size = 27
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uubjt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.512023, 0.535367, 0.570889, 1)
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(1152, 0)
+layout_mode = 2
+offset_top = 175.0
+offset_right = 1152.0
+offset_bottom = 206.0
+text = "Project Butterfly"
+label_settings = SubResource("LabelSettings_lthh4")
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_right = 759.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Jouer" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Jouer"
+
+[node name="Crédits" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Crédits"
+
+[node name="Quitter" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Quitter"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Jouer" to="." method="_on_jouer_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Crédits" to="." method="_on_crédits_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]

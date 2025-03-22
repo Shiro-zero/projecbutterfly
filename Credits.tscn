@@ -14,6 +14,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ynf4x")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1152, 648)
 layout_mode = 0

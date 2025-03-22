@@ -58,9 +58,7 @@ func draggable_on_top(draggables):
 func follow_mouse():
 	if draggable_dragged:
 		var mouse_pos = get_global_mouse_position()
-		var posx = mouse_pos.x + drag_offset.x
-		var posy = mouse_pos.y + drag_offset.y
-		draggable_dragged.global_position =  mouse_pos + drag_offset 
+		draggable_dragged.global_position = mouse_pos + drag_offset 
 
 func start_drag():
 	if draggable :

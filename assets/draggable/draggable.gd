@@ -10,12 +10,12 @@ func _ready() -> void:
 	
 func _on_area_2d_mouse_entered() -> void:
 	emit_signal('hover', self)
-	print("hover_on")
+	#print("hover_on")
 
 
 func _on_area_2d_mouse_exited() -> void:
 	emit_signal('hover_off', self)
-	print("hover_off")
+	#print("hover_off")
 	
 func hover_on():
 	z_index = hover_z_index

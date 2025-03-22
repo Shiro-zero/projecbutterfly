@@ -23,3 +23,7 @@ position = Vector2(121, 560)
 
 [node name="Stamp2" parent="DraggableController" instance=ExtResource("3_aqk2v")]
 position = Vector2(357, 570)
+is_accepted_stamp = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 326)

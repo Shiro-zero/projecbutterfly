@@ -7,5 +7,5 @@ func spawn_loi(n:int):
 	for i in range(n):
 		var temp = preFeuille.instantiate()
 		$DraggableController.add_child(temp)
-		temp.position=Vector2(400,400)
+		temp.position=Vector2(800,400)
 		temp.rotation=randf_range(-.05, .05)

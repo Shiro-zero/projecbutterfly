@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ProjecButterfly"
-run/main_scene="uid://cia31jihqbj7t"
+run/main_scene="uid://bnb03ahupuh0o"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

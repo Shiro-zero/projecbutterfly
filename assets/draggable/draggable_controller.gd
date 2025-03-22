@@ -69,6 +69,8 @@ func start_drag():
 		draggable_dragged = draggable
 		highlight_draggable(draggable_dragged, true)
 		drag_offset = draggable_dragged.global_position - get_global_mouse_position()
+		if draggable_dragged.is_in_group("feuille"):
+			draggable_dragged.rotation = 0
 
 func end_drag():
 	if draggable_dragged:
@@ -92,6 +94,9 @@ func end_drag():
 						print('recharge rouge')
 					pass
 		if draggable_dragged.is_in_group("feuille"):
+			var tween = create_tween()
+			var target_rotation = randf_range(-0.05, 0.05)
+			draggable_dragged.rotation=target_rotation
 			var basket = raycast_check(COLLISION_MASK_BASKET)
 			if basket:
 				print("basket existe")

@@ -18,6 +18,5 @@ func stamp(feuille):
 		feuille.is_accepted = is_accepted_stamp
 		is_charged = false
 
-
 func recharge_stamp():
 	is_charged = true

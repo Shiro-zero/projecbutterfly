@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1p82l7ww21hu"]
+[gd_scene load_steps=5 format=3 uid="uid://caobt1w4cxy2p"]
 
 [ext_resource type="Script" uid="uid://c5kj5bflmiusr" path="res://script/world.gd" id="1_aqk2v"]
 [ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://assets/draggable/draggable_controller.gd" id="2_tlwt5"]
@@ -14,14 +14,14 @@ script = ExtResource("1_aqk2v")
 script = ExtResource("2_tlwt5")
 
 [node name="DockStamp" parent="DraggableController" instance=ExtResource("4_aqk2v")]
-position = Vector2(126, 569)
+position = Vector2(881, 578)
 
 [node name="DockStamp2" parent="DraggableController" instance=ExtResource("4_aqk2v")]
-position = Vector2(355, 573)
+position = Vector2(1086, 577)
 color = "red"
 
 [node name="Stamp" parent="DraggableController" instance=ExtResource("3_aqk2v")]
-position = Vector2(121, 560)
+position = Vector2(886, 576)
 
 [node name="Stamp2" parent="DraggableController" instance=ExtResource("3_aqk2v")]
 position = Vector2(357, 570)

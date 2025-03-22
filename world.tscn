@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://caobt1w4cxy2p"]
+
+[ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://draggable_controller.gd" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://c6jcudcng37uv" path="res://draggable.tscn" id="3_aqk2v"]
+
+[node name="World" type="Node2D"]
+
+[node name="DraggableController" type="Node2D" parent="."]
+script = ExtResource("2_tlwt5")
+
+[node name="draggable" parent="DraggableController" instance=ExtResource("3_aqk2v")]
+position = Vector2(253, 243)
+
+[node name="draggable2" parent="DraggableController" instance=ExtResource("3_aqk2v")]
+position = Vector2(630, 321)

@@ -19,12 +19,13 @@ config/icon="res://icon.svg"
 
 window/vsync/vsync_mode=0
 
-[gui]
-
-theme/custom_font="uid://bvws4xtih6ysl"
 [global_group]
 
 stamp=""
+
+[gui]
+
+theme/custom_font="uid://bvws4xtih6ysl"
 
 [rendering]
 

@@ -1,17 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://caobt1w4cxy2p"]
 
+[ext_resource type="Script" uid="uid://c5kj5bflmiusr" path="res://script/world.gd" id="1_aqk2v"]
 [ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://assets/draggable/draggable_controller.gd" id="2_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://hb3aac8egouy" path="res://assets/stamp/stamp.tscn" id="3_aqk2v"]
-[ext_resource type="PackedScene" uid="uid://bvymuumfip7mt" path="res://assets/feuille papier/feuille_papier.tscn" id="3_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://dt762xg0eehs" path="res://assets/stamp/dock_stamp.tscn" id="4_aqk2v"]
+[ext_resource type="PackedScene" path="res://assets/stamp/stamp.tscn" id="3_aqk2v"]
+[ext_resource type="PackedScene" path="res://assets/stamp/dock_stamp.tscn" id="4_aqk2v"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_aqk2v")
 
 [node name="DraggableController" type="Node2D" parent="."]
 script = ExtResource("2_tlwt5")
-
-[node name="FeuillePapier2" parent="DraggableController" instance=ExtResource("3_tlwt5")]
-position = Vector2(310, 315)
 
 [node name="Stamp" parent="DraggableController" groups=["stamp"] instance=ExtResource("3_aqk2v")]
 position = Vector2(681, 530)

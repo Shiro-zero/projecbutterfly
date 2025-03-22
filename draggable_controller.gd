@@ -13,7 +13,7 @@ var is_draggable_hovering
 var drag_offset = Vector2.ZERO
 
 func _ready() -> void:
-	screen_size = get_viewport_rect
+	screen_size = get_viewport_rect()
 	
 func _process(delta: float) -> void:
 	follow_mouse()
@@ -58,7 +58,9 @@ func draggable_on_top(draggables):
 func follow_mouse():
 	if draggable_dragged:
 		var mouse_pos = get_global_mouse_position()
-		draggable_dragged.global_position = Vector2(clamp(mouse_pos.x + drag_offset.x, 0, screen_size.x), clamp(mouse_pos.y + drag_offset.y, 0, screen_size.y))
+		var posx = mouse_pos.x + drag_offset.x
+		var posy = mouse_pos.y + drag_offset.y
+		draggable_dragged.global_position =  mouse_pos + drag_offset 
 
 func start_drag():
 	if draggable :

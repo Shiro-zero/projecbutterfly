@@ -2,7 +2,8 @@ extends Node2D
 
 
 const COLLISION_MASK_DRAGGABLE = 1
-const COLLISION_MASK_STAMP_SLOT = 2
+const COLLISION_MASK_FEUILLE = 2
+const COLLISION_MASK_STAMP_SLOT = 3
 const DRAGGABLE_HOVER = Vector2(1.1, 1.1)
 const DRAGGABLE_HOVER_OFF = Vector2(1, 1)
 
@@ -22,12 +23,12 @@ func _input(event: InputEvent):
 	if event is InputEventMouseButton and  event.button_index == MOUSE_BUTTON_LEFT:		#s'assure que le bouton appuiyer est le bouton gauche de souris
 		if event.pressed :
 			# Action au click
-			print("click")
+			#print("click")
 			draggable = raycast_check(COLLISION_MASK_DRAGGABLE)
 			start_drag()
 		else:
 			# Action au déclick
-			print("déclick")
+			#print("déclick")
 			end_drag()
 
 func connect_draggable_signals(draggable):
@@ -73,10 +74,13 @@ func start_drag():
 func end_drag():
 	if draggable_dragged:
 		highlight_draggable(draggable_dragged, false)
-		var slot = raycast_check(COLLISION_MASK_STAMP_SLOT)
-		if slot:
-			if draggable_dragged.is_in_group("stamp"):
-				draggable_dragged
+		
+		if draggable_dragged.is_in_group("stamp"):
+			print("drop stamp")
+			var feuille = raycast_check(COLLISION_MASK_FEUILLE)
+			if feuille:
+				print("stamp feuille")
+				draggable_dragged.stamp(feuille)
 		draggable_dragged = null
 		#ajouter logique de relache ici vérification d'ou il a été relaché
 		
@@ -88,12 +92,12 @@ func on_draggable_hover():
 		
 func on_draggable_hover_off():
 	#if !is_draggable_hovering:
-	print("grossit")
+	print("rétrécit")
 	is_draggable_hovering = false
 	highlight_draggable(draggable, false)
 		
 func highlight_draggable(draggable, hover: bool):
-	print(draggable)
+	#print(draggable)
 	if hover:
 		pass
 		draggable.scale = DRAGGABLE_HOVER

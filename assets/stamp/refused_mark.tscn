@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cb7eeyu83xk15"]
+
+[node name="refused" type="Sprite2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -58.0
+offset_top = -63.0
+offset_right = 59.0
+offset_bottom = 58.0
+color = Color(1, 0, 0, 1)

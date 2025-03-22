@@ -4,6 +4,8 @@ extends Node2D
 const COLLISION_MASK_DRAGGABLE = 1
 const COLLISION_MASK_FEUILLE = 2
 const COLLISION_MASK_STAMP_DOCK = 4
+const COLLISION_MASK_BASKET = 8
+
 const DRAGGABLE_HOVER = Vector2(1.1, 1.1)
 const DRAGGABLE_HOVER_OFF = Vector2(1, 1)
 
@@ -15,6 +17,7 @@ var drag_offset = Vector2.ZERO
 
 func _ready() -> void:
 	screen_size = get_viewport_rect()
+	print()
 	
 func _process(delta: float) -> void:
 	follow_mouse()
@@ -30,10 +33,6 @@ func _input(event: InputEvent):
 			# Action au déclick
 			#print("déclick")
 			end_drag()
-
-func connect_draggable_signals(draggable):
-	draggable.connect('hover', on_draggable_hover)
-	draggable.connect('hover_off', on_draggable_hover_off)
 	
 func raycast_check(mask):
 	var world = get_world_2d().direct_space_state
@@ -92,22 +91,20 @@ func end_drag():
 						draggable_dragged.is_charged = true
 						print('recharge rouge')
 					pass
+		if draggable_dragged.is_in_group("feuille"):
+			var basket = raycast_check(COLLISION_MASK_BASKET)
+			if basket:
+				print("basket existe")
+				if draggable_dragged.is_accepted != null:
+					basket.drop_feuille_in_basket_animation(draggable_dragged)
+					#desactive la collision
+					draggable_dragged.get_node("Area2D").get_node("CollisionShape2D").disabled = true
+					#mettre info journal ici
 					
-					
+
 		draggable_dragged = null
 		#ajouter logique de relache ici vérification d'ou il a été relaché
 		
-func on_draggable_hover():
-	#if !is_draggable_hovering:
-	print("grossit")
-	is_draggable_hovering = true
-	highlight_draggable(draggable, true)
-		
-func on_draggable_hover_off():
-	#if !is_draggable_hovering:
-	print("rétrécit")
-	is_draggable_hovering = false
-	highlight_draggable(draggable, false)
 	
 
 func highlight_draggable(draggable, hover: bool):

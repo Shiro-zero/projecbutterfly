@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="ProjecButterfly"
-run/main_scene="uid://caobt1w4cxy2p"
+run/main_scene="uid://c6piyvqtoxr4c"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
 window/vsync/vsync_mode=0
+
+[gui]
+
+theme/custom_font="uid://bvws4xtih6ysl"
 
 [rendering]
 

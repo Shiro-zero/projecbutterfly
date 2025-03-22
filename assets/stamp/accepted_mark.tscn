@@ -1,10 +1,23 @@
-[gd_scene format=3 uid="uid://cjlf6jlalgwyp"]
+[gd_scene load_steps=2 format=3 uid="uid://cjlf6jlalgwyp"]
+
+[ext_resource type="Theme" uid="uid://dth1rsufggsyf" path="res://assets/theme/mark.tres" id="1_onjwb"]
 
 [node name="accepted" type="Sprite2D"]
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -128.0
+offset_top = -46.0
+offset_right = 129.0
+offset_bottom = 37.0
+theme = ExtResource("1_onjwb")
+bbcode_enabled = true
+text = "[center]ACCEPTE[/center]"
+fit_content = true
+scroll_active = false
+
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -58.0
-offset_top = -63.0
-offset_right = 59.0
-offset_bottom = 58.0
-color = Color(0, 1, 0, 1)
+visible = false
+offset_left = -146.0
+offset_top = -37.0
+offset_right = 132.0
+offset_bottom = 29.0

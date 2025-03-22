@@ -1,10 +1,25 @@
-[gd_scene format=3 uid="uid://cb7eeyu83xk15"]
+[gd_scene load_steps=2 format=3 uid="uid://cb7eeyu83xk15"]
+
+[ext_resource type="Theme" uid="uid://dth1rsufggsyf" path="res://assets/theme/mark.tres" id="1_ro2ps"]
 
 [node name="refused" type="Sprite2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -58.0
 offset_top = -63.0
 offset_right = 59.0
 offset_bottom = 58.0
 color = Color(1, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -132.0
+offset_top = -46.0
+offset_right = 125.0
+offset_bottom = 37.0
+theme = ExtResource("1_ro2ps")
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+bbcode_enabled = true
+text = "[center]REFUSE[/center]"
+fit_content = true
+scroll_active = false

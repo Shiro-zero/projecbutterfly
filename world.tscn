@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dkkg7ud4bqi17" path="res://assets/stamp/stamp.tscn" id="3_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://dt762xg0eehs" path="res://assets/stamp/dock_stamp.tscn" id="4_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://bqmq4sw1xbvp" path="res://Hamburger_icon.svg.png" id="5_036b0"]
-[ext_resource type="PackedScene" uid="uid://w64cls1upc1n" path="res://Jauge.tscn" id="5_dwbse"]
+[ext_resource type="PackedScene" path="res://Jauge.tscn" id="5_dwbse"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_aqk2v")

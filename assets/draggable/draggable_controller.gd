@@ -66,8 +66,8 @@ func follow_mouse():
 
 func start_drag():
 	if draggable :
-		highlight_draggable(draggable_dragged, true)
 		draggable_dragged = draggable
+		highlight_draggable(draggable_dragged, true)
 		drag_offset = draggable_dragged.global_position - get_global_mouse_position()
 
 func end_drag():
@@ -77,7 +77,6 @@ func end_drag():
 		if slot:
 			if draggable_dragged.is_in_group("stamp"):
 				draggable_dragged
-				
 		draggable_dragged = null
 		#ajouter logique de relache ici vérification d'ou il a été relaché
 		
@@ -96,8 +95,9 @@ func on_draggable_hover_off():
 func highlight_draggable(draggable, hover: bool):
 	print(draggable)
 	if hover:
+		pass
 		draggable.scale = DRAGGABLE_HOVER
-		draggable.z_index = draggable.hover_base_index
+		draggable.z_index = draggable.hover_z_index
 	else:
 		draggable.scale = DRAGGABLE_HOVER_OFF
 		draggable.z_index = draggable.base_z_index

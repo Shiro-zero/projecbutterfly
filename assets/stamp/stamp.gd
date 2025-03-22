@@ -21,7 +21,7 @@ func stamp(feuille):
 			mark = refused_mark.instantiate()
 			$Sprite2D.texture= load("res://assets/stamp/stampx.png")
 			
-		feuille.add_child(mark)
+		feuille.get_child(3).add_child(mark)
 		mark.global_position = global_position
 		feuille.is_accepted = is_accepted_stamp
 		is_charged = false

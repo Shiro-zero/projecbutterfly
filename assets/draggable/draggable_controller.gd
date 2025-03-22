@@ -21,7 +21,7 @@ func _ready() -> void:
 	screen_size = get_viewport_rect()
 	print()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	follow_mouse()
 	
 func _input(event: InputEvent):

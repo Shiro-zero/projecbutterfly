@@ -1,40 +1,46 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1p82l7ww21hu"]
+[gd_scene load_steps=8 format=3 uid="uid://b1p82l7ww21hu"]
 
 [ext_resource type="Script" uid="uid://c5kj5bflmiusr" path="res://script/world.gd" id="1_aqk2v"]
 [ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://assets/draggable/draggable_controller.gd" id="2_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://dkkg7ud4bqi17" path="res://assets/stamp/stamp.tscn" id="3_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://dt762xg0eehs" path="res://assets/stamp/dock_stamp.tscn" id="4_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://bqmq4sw1xbvp" path="res://Hamburger_icon.svg.png" id="5_036b0"]
-[ext_resource type="PackedScene" path="res://Jauge.tscn" id="5_dwbse"]
+[ext_resource type="PackedScene" uid="uid://w64cls1upc1n" path="res://Jauge.tscn" id="5_dwbse"]
+[ext_resource type="Texture2D" uid="uid://c8xk4cxv6e1uw" path="res://assets/img/5.png" id="7_pkg7o"]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_aqk2v")
+metadata/_edit_lock_ = true
 
 [node name="DraggableController" type="Node2D" parent="."]
 script = ExtResource("2_tlwt5")
 
 [node name="DockStamp" parent="DraggableController" instance=ExtResource("4_aqk2v")]
-position = Vector2(881, 578)
+position = Vector2(250, 914)
 
 [node name="DockStamp2" parent="DraggableController" instance=ExtResource("4_aqk2v")]
-position = Vector2(1086, 577)
+position = Vector2(455, 913)
 color = "red"
 
 [node name="Stamp" parent="DraggableController" instance=ExtResource("3_aqk2v")]
-position = Vector2(886, 576)
+position = Vector2(255, 912)
 
 [node name="Stamp2" parent="DraggableController" instance=ExtResource("3_aqk2v")]
-position = Vector2(357, 570)
+position = Vector2(453, 910)
 is_accepted_stamp = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(575, 326)
+position = Vector2(956, 542)
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 892.0
-offset_top = 2.0
-offset_right = 1151.0
-offset_bottom = 257.0
+self_modulate = Color(1, 0, 1, 1)
+layout_mode = 0
+offset_left = 1663.0
+offset_top = 6.0
+offset_right = 1922.0
+offset_bottom = 261.0
 
 [node name="Stress" parent="Panel" instance=ExtResource("5_dwbse")]
 layout_mode = 1
@@ -83,5 +89,13 @@ offset_top = 3.0
 offset_right = 59.0
 offset_bottom = 59.0
 icon = ExtResource("5_036b0")
+metadata/_edit_use_anchors_ = true
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -100
+position = Vector2(958.5, 559)
+scale = Vector2(2.5013, 1.98214)
+texture = ExtResource("7_pkg7o")
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="CanvasLayer/Accueil" to="." method="_on_accueil_pressed"]

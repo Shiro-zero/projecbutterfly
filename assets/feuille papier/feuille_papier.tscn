@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvymuumfip7mt"]
+[gd_scene load_steps=8 format=3 uid="uid://bvymuumfip7mt"]
 
 [ext_resource type="Script" uid="uid://d0yn4vrme7gqa" path="res://assets/feuille papier/feuille_papier.gd" id="1_v5b2u"]
 [ext_resource type="Theme" uid="uid://g5u11w05w346" path="res://assets/theme/tbody.tres" id="2_gad6y"]
-[ext_resource type="Shader" path="res://assets/feuille papier/outline.gdshader" id="2_y1cr7"]
+[ext_resource type="Shader" uid="uid://c1dy6xu6pgsyi" path="res://assets/feuille papier/outline.gdshader" id="2_y1cr7"]
 [ext_resource type="Theme" uid="uid://dom180ssw4e6l" path="res://assets/theme/titre.tres" id="3_y1cr7"]
+[ext_resource type="Texture2D" uid="uid://j1q2g1q6aj8q" path="res://assets/feuille papier/stamp_here.png" id="5_jj0ps"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jj0ps"]
 shader = ExtResource("2_y1cr7")
@@ -76,6 +77,19 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(98.5, 125.5)
 shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="stamp_area" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -255.0
+offset_top = -346.0
+offset_right = 262.0
+offset_bottom = 352.0
+
+[node name="StampHere" type="Sprite2D" parent="."]
+position = Vector2(152, 289)
+texture = ExtResource("5_jj0ps")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

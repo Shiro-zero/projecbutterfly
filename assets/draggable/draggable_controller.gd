@@ -107,12 +107,12 @@ func end_drag():
 		
 	
 
-func highlight_draggable(draggable, hover: bool):
+func highlight_draggable(drag, hover: bool):
 	#print(draggable)
 	if hover:
 		pass
 		draggable.scale = DRAGGABLE_HOVER
-		draggable.z_index = draggable.hover_z_index
+		draggable.z_index = drag.hover_z_index
 	else:
 		draggable.scale = DRAGGABLE_HOVER_OFF
-		draggable.z_index = draggable.base_z_index
+		draggable.z_index = drag.base_z_index

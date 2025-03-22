@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bmy4c6l2igtmt" path="res://menu.gd" id="1_uubjt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lthh4"]
-font_size = 27
+font_size = 36
 
 [node name="Menu" type="Control"]
 layout_mode = 3

@@ -37,6 +37,8 @@ func raycast_check(mask):
 	mouse.position = get_global_mouse_position()
 	mouse.collide_with_areas = true
 	mouse.collision_mask = mask
+	#pour vérifier le mask
+	#print(world.intersect_point(mouse))
 	# Selectionne la carte pour pouvoir la déplacer
 	var objects_colliders = world.intersect_point(mouse)
 	if objects_colliders.size() > 0:

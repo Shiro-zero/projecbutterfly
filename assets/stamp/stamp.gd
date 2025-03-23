@@ -5,6 +5,24 @@ var accepted_mark = preload ("res://assets/stamp/accepted_mark.tscn")
 var refused_mark = preload ("res://assets/stamp/refused_mark.tscn")
 var is_charged = true
 
+@onready var audio = $Audio
+@export var sfx_pickup = null
+@export  var sfx_drop = preload("res://sfx/Stamp.wav")
+
+func pickup_sound():
+	if sfx_pickup:
+		audio.stream = sfx_pickup
+		audio.pitch_scale = randf_range(0.85, 1.15) # pitch légèrement aléatoire
+		audio.volume_db = randf_range(8, 12)      # volume entre -6dB et -2dB
+		audio.play()
+
+func drop_sound():
+	if sfx_drop:
+		audio.stream = sfx_drop
+		audio.pitch_scale = randf_range(0.85, 1.15)
+		audio.volume_db = randf_range(8, 12)
+		audio.play()
+	
 func _ready():
 	if is_accepted_stamp:
 		$Sprite2D.texture=load("res://assets/stamp/stamp.png")

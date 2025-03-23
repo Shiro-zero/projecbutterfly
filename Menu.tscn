@@ -61,6 +61,7 @@ layout_mode = 2
 text = "Crédits"
 
 [node name="Mode Infini" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Mode Infini"

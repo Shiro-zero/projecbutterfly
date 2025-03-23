@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bitrsylbiv2if"
+path="res://.godot/imported/Ambianca Bureau.mp3-c6ea8945fd6eb9bcb00c6b5b76cffd59.mp3str"
+
+[deps]
+
+source_file="res://sfx/Ambianca Bureau.mp3"
+dest_files=["res://.godot/imported/Ambianca Bureau.mp3-c6ea8945fd6eb9bcb00c6b5b76cffd59.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,5 +1,6 @@
 extends Node
 
+@onready var dialogue_controller = $"../DialogueControlleur"
 @onready var draggable_controller = $"../DraggableController"
 var junks = [
 	preload("res://assets/junk/junk_doc.tscn"),
@@ -11,7 +12,7 @@ var number_of_junk = 5
 func _ready():
 	add_child(junk_timer)
 	junk_timer.one_shot = true
-	var delay = randf_range(3.0, 5.0) # entre 1 et 3 secondes par exemple
+	var delay = randf_range(15.0, 50.0) 
 	junk_timer.start(delay)
 	junk_timer.timeout.connect(_random_spawn_junk)
 	
@@ -22,6 +23,7 @@ func spawn_junk(n:int):
 	affiche_junk(apple.instantiate())
 
 func affiche_junk(junk):
+	dialogue_controller.show_random_dialogue("secretaire", "junk")
 	draggable_controller.add_child(junk)
 	draggable_controller.index_increment(junk)
 	junk.position=Vector2(500, -800)

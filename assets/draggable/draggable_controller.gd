@@ -8,7 +8,7 @@ const COLLISION_MASK_BASKET = 8
 
 const DRAGGABLE_HOVER = Vector2(1.1, 1.1)
 const DRAGGABLE_HOVER_OFF = Vector2(1, 1)
-
+var starting_pos = Vector2(400,400)
 var screen_size
 var draggable_dragged
 var draggable
@@ -20,7 +20,6 @@ var last_index = 1
 
 func _ready() -> void:
 	screen_size = get_viewport_rect()
-	print()
 	
 func _process(_delta: float) -> void:
 	follow_mouse()
@@ -70,31 +69,34 @@ func follow_mouse():
 func start_drag():
 	if draggable :
 		draggable_dragged = draggable
+		starting_pos = draggable_dragged.position
+		draggable_dragged.pickup_sound()
 		highlight_draggable(draggable_dragged, true)
 		drag_offset = draggable_dragged.global_position - get_global_mouse_position()
 		if draggable_dragged.is_in_group("feuille"):
 			draggable_dragged.rotation = 0
 
 func end_drag():
+
 	if draggable_dragged:
 		highlight_draggable(draggable_dragged, false)
-		
+		draggable_dragged.drop_sound()
 		if draggable_dragged.is_in_group("stamp"):
-			print("drop stamp")
+			#print("drop stamp")
 			var feuille = raycast_check(COLLISION_MASK_FEUILLE)
 			if feuille:
-				print("stamp feuille")
+				#print("stamp feuille")
 				draggable_dragged.stamp(feuille)
 			else:
 				var dock = raycast_check(COLLISION_MASK_STAMP_DOCK)
 				if dock:
-					print(dock)
+					#print(dock)
 					if dock.color == "green" && draggable_dragged.is_accepted_stamp:
 						draggable_dragged.is_charged = true
-						print('recharge vert')
+						#print('recharge vert')
 					elif dock.color == "red" && !draggable_dragged.is_accepted_stamp:
 						draggable_dragged.is_charged = true
-						print('recharge rouge')
+						#print('recharge rouge')
 					pass
 		if draggable_dragged.is_in_group("feuille"):
 			var tween = create_tween()
@@ -102,7 +104,7 @@ func end_drag():
 			draggable_dragged.rotation=target_rotation
 			var basket = raycast_check(COLLISION_MASK_BASKET)
 			if basket:
-				print("basket existe")
+				#print("basket existe")
 				#si il y a un stamp
 				if draggable_dragged.is_accepted == null:
 					$"../Stats/Mr_President".update_value(-5)
@@ -116,6 +118,12 @@ func end_drag():
 					draggable_dragged.get_node("Area2D").get_node("CollisionShape2D").disabled = true
 					#mettre info journal ici
 					
+					
+		if draggable_dragged.position.x > 1920 or draggable_dragged.position.y > 1280 or draggable_dragged.position.x < 0 or draggable_dragged.position.y < -200:
+			if  draggable_dragged.is_in_group("junk"):
+				#draggable_dragged.position = Vector2(-100,-100)
+				draggable_dragged.queue_free()
+			draggable_dragged.position = starting_pos
 
 		draggable_dragged = null
 		#ajouter logique de relache ici vérification d'ou il a été relaché

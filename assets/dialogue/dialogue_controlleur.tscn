@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://ous6lld5rewm"]
+
+[ext_resource type="Script" uid="uid://c7sqr0jq7sgs0" path="res://assets/dialogue/dialogue_controlleur.gd" id="1_7db1c"]
+
+[node name="DialogueControlleur" type="Node2D"]
+z_index = 4096
+script = ExtResource("1_7db1c")
+
+[node name="DialogueBox" type="Panel" parent="."]
+offset_left = -517.0
+offset_top = -81.0
+offset_right = 535.0
+offset_bottom = 63.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Portrait" type="Sprite2D" parent="DialogueBox"]
+
+[node name="Label" type="Label" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 25.0
+offset_right = 1014.0
+offset_bottom = 119.0
+metadata/_edit_use_anchors_ = true

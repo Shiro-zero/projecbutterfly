@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://caobt1w4cxy2p"]
+[gd_scene load_steps=10 format=3 uid="uid://caobt1w4cxy2p"]
 
 [ext_resource type="Script" uid="uid://c5kj5bflmiusr" path="res://script/world.gd" id="1_aqk2v"]
 [ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://assets/draggable/draggable_controller.gd" id="2_tlwt5"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://w64cls1upc1n" path="res://Jauge.tscn" id="5_dwbse"]
 [ext_resource type="Texture2D" uid="uid://c8xk4cxv6e1uw" path="res://assets/img/5.png" id="7_gbfbk"]
 [ext_resource type="Script" uid="uid://01wyumx2o1ne" path="res://assets/junk/junk_spill_controller.gd" id="7_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://cfjl87e64tojm" path="res://assets/feuille papier/basket.tscn" id="9_ioo17"]
 
 [node name="World" type="Control"]
 layout_mode = 3
@@ -94,5 +95,8 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("7_pkg7o")
+
+[node name="Basket" parent="." instance=ExtResource("9_ioo17")]
+position = Vector2(1309, -107)
 
 [connection signal="pressed" from="Accueil_btn/Accueil" to="." method="_on_accueil_pressed"]

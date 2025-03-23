@@ -4,7 +4,7 @@ var preFeuille = preload("res://assets/feuille papier/feuille_papier.tscn")
 @onready var draggable_controller = $DraggableController
 
 func _ready():
-	spawn_loi(3)
+	spawn_loi(6)
 	
 	
 	

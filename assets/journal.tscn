@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://crb33ra7ttltf"]
+
+[ext_resource type="Texture2D" uid="uid://b11b5uclb7xm4" path="res://assets/img/journal.png" id="1_vhjcs"]
+[ext_resource type="Script" uid="uid://maufd5koi064" path="res://assets/journal.gd" id="1_wp7br"]
+[ext_resource type="LabelSettings" uid="uid://brjgsuidmiigo" path="res://assets/new_label_settings.tres" id="3_iwjqk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sdjkp"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Journal" type="Node2D"]
+script = ExtResource("1_wp7br")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-39, -23)
+texture = ExtResource("1_vhjcs")
+
+[node name="Titre1" type="Label" parent="."]
+offset_left = -735.0
+offset_top = -316.0
+offset_right = -387.0
+offset_bottom = -219.0
+text = "Test"
+label_settings = ExtResource("3_iwjqk")
+autowrap_mode = 1
+
+[node name="Titre2" type="Label" parent="."]
+offset_left = -741.0
+offset_top = 112.0
+offset_right = -393.0
+offset_bottom = 209.0
+text = "Test"
+label_settings = ExtResource("3_iwjqk")
+autowrap_mode = 1
+
+[node name="Titre3" type="Label" parent="."]
+offset_left = 71.0
+offset_top = -307.0
+offset_right = 419.0
+offset_bottom = -210.0
+text = "Test"
+label_settings = ExtResource("3_iwjqk")
+autowrap_mode = 1
+
+[node name="Titre4" type="Label" parent="."]
+offset_left = 73.0
+offset_top = 117.0
+offset_right = 421.0
+offset_bottom = 214.0
+text = "Test"
+label_settings = ExtResource("3_iwjqk")
+autowrap_mode = 1
+
+[node name="Titre5" type="Label" parent="."]
+offset_left = -304.0
+offset_top = -298.0
+offset_right = -124.0
+offset_bottom = -201.0
+text = "Test"
+label_settings = SubResource("LabelSettings_sdjkp")
+autowrap_mode = 1
+
+[node name="Titre6" type="Label" parent="."]
+offset_left = 512.0
+offset_top = -299.0
+offset_right = 692.0
+offset_bottom = -202.0
+text = "Test"
+label_settings = SubResource("LabelSettings_sdjkp")
+autowrap_mode = 1

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cini342hluqv2"]
+
+[ext_resource type="Texture2D" uid="uid://c8w14x5igh4uk" path="res://progress-bar-circle.png" id="1_kig64"]
+[ext_resource type="Texture2D" uid="uid://bwy8cbvws8avc" path="res://progress-bar-frame.png" id="2_4n1wf"]
+[ext_resource type="Script" uid="uid://dhi1078w6v7w2" path="res://clock.gd" id="3_4n1wf"]
+
+[node name="Clock" type="TextureProgressBar"]
+offset_right = 128.0
+offset_bottom = 128.0
+max_value = 60.0
+fill_mode = 4
+texture_under = ExtResource("1_kig64")
+texture_over = ExtResource("2_4n1wf")
+texture_progress = ExtResource("1_kig64")
+tint_under = Color(0.0862745, 0.0862745, 0.0862745, 0.392157)
+tint_progress = Color(0, 0.705714, 0.251487, 1)
+script = ExtResource("3_4n1wf")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 40.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

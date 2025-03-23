@@ -12,6 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://ous6lld5rewm" path="res://assets/dialogue/dialogue_controlleur.tscn" id="10_wse8f"]
 [ext_resource type="Script" uid="uid://r5cwpj5dq5q1" path="res://audio_stream_player.gd" id="11_ic0uy"]
 [ext_resource type="AudioStream" uid="uid://bitrsylbiv2if" path="res://sfx/Ambianca Bureau.mp3" id="11_k3n1d"]
+[ext_resource type="PackedScene" uid="uid://cini342hluqv2" path="res://clock.tscn" id="11_ic0uy"]
+[ext_resource type="PackedScene" uid="uid://d3kfdq6mp57lo" path="res://game_over.tscn" id="12_k3n1d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wse8f"]
+font_size = 37
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [node name="World" type="Control"]
 layout_mode = 3
@@ -22,7 +29,7 @@ metadata/_edit_lock_ = true
 [node name="DraggableController" type="Node2D" parent="."]
 script = ExtResource("2_tlwt5")
 
-[node name="DockStamp" parent="DraggableController" instance=ExtResource("4_aqk2v")]
+[node name="DockStamp" parent="DraggableController" groups=["feuille"] instance=ExtResource("4_aqk2v")]
 position = Vector2(1565, 882)
 
 [node name="DockStamp2" parent="DraggableController" instance=ExtResource("4_aqk2v")]
@@ -79,10 +86,10 @@ color = "00aef3"
 [node name="Accueil_btn" type="CanvasLayer" parent="."]
 
 [node name="Accueil" type="Button" parent="Accueil_btn"]
-offset_left = 13.0
-offset_top = 262.0
-offset_right = 69.0
-offset_bottom = 318.0
+offset_left = 17.0
+offset_top = 321.0
+offset_right = 73.0
+offset_bottom = 377.0
 icon = ExtResource("5_036b0")
 metadata/_edit_use_anchors_ = true
 
@@ -110,5 +117,28 @@ stream = ExtResource("11_k3n1d")
 autoplay = true
 parameters/looping = true
 script = ExtResource("11_ic0uy")
+
+[node name="Day" type="CanvasLayer" parent="."]
+
+[node name="Crn_Day" type="Label" parent="Day"]
+offset_left = 15.0
+offset_top = 258.0
+offset_right = 115.0
+offset_bottom = 309.0
+text = "Lundi"
+label_settings = SubResource("LabelSettings_wse8f")
+
+[node name="Clock" parent="Day" instance=ExtResource("11_ic0uy")]
+offset_left = 1781.0
+offset_top = 10.0
+offset_right = 1909.0
+offset_bottom = 138.0
+tint_under = Color(0.0862745, 0.0862745, 0.0862745, 0.392157)
+tint_progress = Color(0, 0.705714, 0.251487, 1)
+
+[node name="Game_Over" parent="." instance=ExtResource("12_k3n1d")]
+visible = false
+z_index = 4096
+layout_mode = 1
 
 [connection signal="pressed" from="Accueil_btn/Accueil" to="." method="_on_accueil_pressed"]

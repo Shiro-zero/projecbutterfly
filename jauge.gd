@@ -20,3 +20,6 @@ func _ready() -> void:
 
 func update_value(nVal : int):
 	bar.value += nVal
+	if bar.value <= 0 and nom != "Fatigue":
+		Global.is_game_over = true
+	

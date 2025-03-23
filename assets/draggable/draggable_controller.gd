@@ -70,6 +70,7 @@ func follow_mouse():
 func start_drag():
 	if draggable :
 		draggable_dragged = draggable
+		draggable_dragged.pickup_sound()
 		highlight_draggable(draggable_dragged, true)
 		drag_offset = draggable_dragged.global_position - get_global_mouse_position()
 		if draggable_dragged.is_in_group("feuille"):
@@ -78,7 +79,7 @@ func start_drag():
 func end_drag():
 	if draggable_dragged:
 		highlight_draggable(draggable_dragged, false)
-		
+		draggable_dragged.drop_sound()
 		if draggable_dragged.is_in_group("stamp"):
 			print("drop stamp")
 			var feuille = raycast_check(COLLISION_MASK_FEUILLE)

@@ -91,5 +91,8 @@ offset_bottom = 352.0
 position = Vector2(407, 635)
 texture = ExtResource("5_jj0ps")
 
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+bus = &"sfx"
+
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

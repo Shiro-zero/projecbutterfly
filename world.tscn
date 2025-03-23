@@ -10,9 +10,9 @@
 [ext_resource type="Script" uid="uid://01wyumx2o1ne" path="res://assets/junk/junk_spill_controller.gd" id="7_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://cfjl87e64tojm" path="res://assets/feuille papier/basket.tscn" id="9_ioo17"]
 [ext_resource type="PackedScene" uid="uid://ous6lld5rewm" path="res://assets/dialogue/dialogue_controlleur.tscn" id="10_wse8f"]
-[ext_resource type="PackedScene" uid="uid://cini342hluqv2" path="res://clock.tscn" id="11_ic0uy"]
+[ext_resource type="PackedScene" path="res://clock.tscn" id="11_ic0uy"]
 [ext_resource type="AudioStream" uid="uid://bitrsylbiv2if" path="res://sfx/Ambianca Bureau.mp3" id="11_k3n1d"]
-[ext_resource type="PackedScene" uid="uid://d3kfdq6mp57lo" path="res://game_over.tscn" id="12_k3n1d"]
+[ext_resource type="PackedScene" path="res://game_over.tscn" id="12_k3n1d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wse8f"]
 font_size = 37

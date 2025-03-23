@@ -51,9 +51,9 @@ func load_dialogues(path: String):
 
 # Appelle ceci : show_random_dialogue("secretaire", "hair")
 func show_random_dialogue(character: String, situation: String):
-	print(dialogues)
+	#print(dialogues)
 	if dialogues.has(character) and dialogues[character].has(situation):
-		print("dialogye fait")
+		#print("dialogye fait")
 		if portraits.has(character):
 			portrait.texture = portraits[character].texture
 			portrait.region_enabled = portraits[character].region_enabled

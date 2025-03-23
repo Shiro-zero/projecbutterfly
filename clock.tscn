@@ -17,7 +17,7 @@ tint_progress = Color(0, 0.705714, 0.251487, 1)
 script = ExtResource("3_4n1wf")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 40.0
+wait_time = 30.0
 one_shot = true
 autostart = true
 

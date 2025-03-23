@@ -3,8 +3,6 @@ var preFeuille = preload("res://assets/feuille papier/feuille_papier.tscn")
 
 @onready var draggable_controller = $DraggableController
 
-
-
 @onready var audio = $Audio
 @export var sfx_pickup = preload("res://sfx/Drag Paper.wav")
 @export var sfx_drop = preload("res://sfx/Drag Paper.wav")

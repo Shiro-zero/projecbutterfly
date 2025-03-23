@@ -1,5 +1,6 @@
 extends Node
 
+@onready var dialogue_controller = $"../DialogueControlleur"
 @onready var draggable_controller = $"../DraggableController"
 var junks = [
 	preload("res://assets/junk/junk_doc.tscn"),
@@ -22,6 +23,7 @@ func spawn_junk(n:int):
 	affiche_junk(apple.instantiate())
 
 func affiche_junk(junk):
+	dialogue_controller.show_random_dialogue("secretaire", "junk")
 	draggable_controller.add_child(junk)
 	draggable_controller.index_increment(junk)
 	junk.position=Vector2(500, -800)

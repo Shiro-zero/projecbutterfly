@@ -1,38 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv316ei6hlejg"]
+[gd_scene load_steps=6 format=3 uid="uid://bv316ei6hlejg"]
 
-[ext_resource type="Script" path="res://credit.gd" id="1_ynf4x"]
+[ext_resource type="Script" uid="uid://v8tbjsvwnp54" path="res://credit.gd" id="1_ynf4x"]
 [ext_resource type="Texture2D" uid="uid://dpphb0stafgca" path="res://assets/img/titlescreen.png" id="2_4qwwl"]
+[ext_resource type="Texture2D" uid="uid://4l257vg011j" path="res://Logo_rond_Logo_MLQuack.webp" id="3_obosj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lthh4"]
 font_size = 36
 
-[node name="Menu" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_k2yj5"]
+font_size = 30
+
+[node name="Credit" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -159.0
+offset_right = 10.0
+offset_bottom = -159.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ynf4x")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(945, 697)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 781.0
-offset_top = 442.0
-offset_right = 1179.0
-offset_bottom = 908.0
+offset_left = 620.0
+offset_top = 322.0
+offset_right = 1310.0
+offset_bottom = 1011.0
 color = Color(0.512023, 0.535367, 0.570889, 1)
 
 [node name="Titre" type="Label" parent="."]
 custom_minimum_size = Vector2(1152, 0)
 layout_mode = 2
-offset_left = 401.0
-offset_top = 471.0
-offset_right = 1553.0
-offset_bottom = 521.0
+offset_left = 386.0
+offset_top = 358.0
+offset_right = 1538.0
+offset_bottom = 408.0
 text = "Project Butterfly"
 label_settings = SubResource("LabelSettings_lthh4")
 horizontal_alignment = 1
@@ -40,23 +48,23 @@ horizontal_alignment = 1
 [node name="Names" type="Label" parent="."]
 custom_minimum_size = Vector2(1152, 0)
 layout_mode = 2
-offset_left = 401.0
-offset_top = 588.0
-offset_right = 1553.0
-offset_bottom = 752.0
-text = "Jean-Loup
-Antoine
-Matéo"
+offset_left = 386.0
+offset_top = 434.0
+offset_right = 1538.0
+offset_bottom = 598.0
+text = "Jean-Loup Dandurand-Pominville
+Antoine Auger
+Matéo Delacote"
 label_settings = SubResource("LabelSettings_lthh4")
 horizontal_alignment = 1
 
 [node name="Revenir" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-offset_left = 794.0
-offset_top = 831.0
-offset_right = 1160.0
-offset_bottom = 873.0
+offset_left = 783.0
+offset_top = 953.0
+offset_right = 1149.0
+offset_bottom = 995.0
 text = "Revenir"
 
 [node name="Titlescreen" type="Sprite2D" parent="."]
@@ -65,5 +73,21 @@ position = Vector2(965.5, 604.375)
 scale = Vector2(1.953, 1.953)
 texture = ExtResource("2_4qwwl")
 metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(965, 727)
+scale = Vector2(0.291855, 0.291855)
+texture = ExtResource("3_obosj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 836.0
+offset_right = 1301.0
+offset_bottom = 938.0
+text = "MLQuack Audio
+(Mathis Schulz et Léa-Kim Hubert-Deschamps)"
+label_settings = SubResource("LabelSettings_k2yj5")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Revenir" to="." method="_on_revenir_pressed"]

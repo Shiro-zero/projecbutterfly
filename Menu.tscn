@@ -60,12 +60,6 @@ custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Crédits"
 
-[node name="Mode Infini" type="Button" parent="MarginContainer/VBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-text = "Mode Infini"
-
 [node name="Quitter" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
@@ -80,5 +74,4 @@ metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Jouer" to="." method="_on_jouer_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Crédits" to="." method="_on_crédits_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Mode Infini" to="." method="_on_mode_infini_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]

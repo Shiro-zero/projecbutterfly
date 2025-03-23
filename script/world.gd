@@ -11,6 +11,7 @@ var preFeuille = preload("res://assets/feuille papier/feuille_papier.tscn")
 @export var sfx_pickup = preload("res://sfx/Drag Paper.wav")
 @export var sfx_drop = preload("res://sfx/Drag Paper.wav")
 
+
 func pickup_sound():
 	audio.stream = sfx_pickup
 	audio.pitch_scale = randf_range(0.5, 2) # pitch légèrement aléatoire
@@ -54,6 +55,11 @@ func remove_garbage():
 	basket.reset_feuilles()
 		
 func change_day():
+	
+	$DraggableController.send_text_to_journal()
+	$Journal.update_texte()
+	$Journal.visible = true
+	await get_tree().create_timer(10).timeout 
 	
 	Global.day += 1
 	

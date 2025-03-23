@@ -1,6 +1,6 @@
 extends Node2D
 
-var list_feuille = {}
+var list_feuille
 @onready var list_titre = [$Titre1,$Titre2, $Titre3, $Titre4, $Titre5, $Titre6]
 
 

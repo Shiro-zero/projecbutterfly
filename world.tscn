@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://caobt1w4cxy2p"]
+[gd_scene load_steps=16 format=3 uid="uid://caobt1w4cxy2p"]
 
 [ext_resource type="Script" uid="uid://c5kj5bflmiusr" path="res://script/world.gd" id="1_aqk2v"]
 [ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://assets/draggable/draggable_controller.gd" id="2_tlwt5"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" path="res://clock.tscn" id="11_ic0uy"]
 [ext_resource type="AudioStream" uid="uid://bitrsylbiv2if" path="res://sfx/Ambianca Bureau.mp3" id="11_k3n1d"]
 [ext_resource type="PackedScene" path="res://game_over.tscn" id="12_k3n1d"]
+[ext_resource type="PackedScene" uid="uid://crb33ra7ttltf" path="res://assets/journal.tscn" id="14_70uel"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wse8f"]
 font_size = 37
@@ -136,5 +137,9 @@ offset_bottom = 138.0
 visible = false
 z_index = 4096
 layout_mode = 1
+
+[node name="Journal" parent="." instance=ExtResource("14_70uel")]
+visible = false
+position = Vector2(968, 570)
 
 [connection signal="pressed" from="Accueil_btn/Accueil" to="." method="_on_accueil_pressed"]

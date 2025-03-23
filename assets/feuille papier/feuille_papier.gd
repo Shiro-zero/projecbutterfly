@@ -8,7 +8,9 @@ var stats = {}
 @export var sfx_pickup = preload("res://sfx/Drag Paper.wav")
 @export var sfx_drop = preload("res://sfx/Drag Paper.wav")
 
+
 func pickup_sound():
+	print(get_journal_text())
 	audio.stream = sfx_pickup
 	audio.pitch_scale = randf_range(1.5, 2) # pitch légèrement aléatoire
 	audio.volume_db = randf_range(-6, -2)      # volume entre -6dB et -2dB
@@ -40,7 +42,7 @@ func applyStat():
 		var lArray = less_str.split(" ") if less_str else []
 	
 		for stat in pArray:
-			var value = (len(stat) + 1) * 5
+			var value = (len(stat) + 1) 
 			
 			match(stat[0]):
 				"S" : statsJauge.get_child(0).update_value(value)
@@ -65,3 +67,7 @@ func knock_back() -> void:
 		
 	tween.parallel().tween_property(self, "rotation_degrees", rotation_degrees + randi_range(-10, 10), 0.8)\
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+func get_journal_text():
+	if is_accepted:
+		return text.read("res://assets/text/info.json")[str(Global.day)][str(instance_index)]["journal"]["1"]
+	return text.read("res://assets/text/info.json")[str(Global.day)][str(instance_index)]["journal"]["0"]

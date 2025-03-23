@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dlnwqf8j8qw6e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8rgx"]
-size = Vector2(715, 515)
+size = Vector2(715, 527)
 
 [node name="JunkDoc" type="Node2D"]
 
@@ -11,9 +11,10 @@ offset_top = -253.0
 offset_right = 347.0
 offset_bottom = 274.0
 color = Color(0.791798, 0.652229, 0.319516, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-12.5, 17.5)
+position = Vector2(-11, 10)
 shape = SubResource("RectangleShape2D_b8rgx")

@@ -51,7 +51,7 @@ func applyStat():
 				"O" : statsJauge.get_child(3).update_value(value)
 				
 		for stat in lArray:
-			var value = (len(stat) + 1) * 5
+			var value = (len(stat) + 1)
 			
 			match(stat[0]):
 				"S" : statsJauge.get_child(0).update_value(-value)

@@ -6,10 +6,12 @@ var list_feuille
 
 func update_liste_feuille(list_feuille_du_controller):
 	list_feuille = list_feuille_du_controller
+	print(list_feuille )
 
 func update_texte():
 	
-	for i in list_feuille:
-		var text = list_feuille[i].get_journal_texte()
+	for i in range(list_feuille.size()):
+		print(list_feuille[i])
+		var text = list_feuille[i].get_journal_text()
 		list_titre[i].text = text
 	pass

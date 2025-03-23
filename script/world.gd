@@ -57,7 +57,7 @@ func remove_garbage():
 	basket.reset_feuilles()
 		
 func change_day():
-	
+	clock.stop_timer()
 	$DraggableController.send_text_to_journal()
 	$Journal.update_texte()
 	$Journal.visible = true
@@ -80,6 +80,7 @@ func change_day():
 		6 : day_str = "Dimanche"
 		_: day_str = "What did ya expect..."
 	
+	$Journal.visible = false
 	day.text = day_str
 	remove_garbage()
 	update_nb_feuilles_crn_day()

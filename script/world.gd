@@ -6,8 +6,6 @@ var preFeuille = preload("res://assets/feuille papier/feuille_papier.tscn")
 func _ready():
 	spawn_loi(3)
 	
-	
-	
 func spawn_loi(n:int):
 	for i in range(n):
 		var temp = preFeuille.instantiate()

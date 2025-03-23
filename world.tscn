@@ -98,7 +98,7 @@ offset_bottom = 40.0
 script = ExtResource("7_pkg7o")
 
 [node name="Basket" parent="." instance=ExtResource("9_ioo17")]
-position = Vector2(1309, -107)
+position = Vector2(1577, -70)
 
 [node name="DialogueControlleur" parent="." instance=ExtResource("10_wse8f")]
 position = Vector2(942, 77)

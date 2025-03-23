@@ -3,7 +3,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8rgx"]
 size = Vector2(349.5, 263.5)
 
-[node name="JunkDoc2" type="Node2D"]
+[node name="JunkDoc2" type="Node2D" groups=["junk"]]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -169.0

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ous6lld5rewm"]
+[gd_scene load_steps=3 format=3 uid="uid://ous6lld5rewm"]
 
 [ext_resource type="Script" uid="uid://c7sqr0jq7sgs0" path="res://assets/dialogue/dialogue_controlleur.gd" id="1_7db1c"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7db1c"]
+size = Vector2(260, 260)
 
 [node name="DialogueControlleur" type="Node2D"]
 z_index = 4096
@@ -14,6 +17,9 @@ offset_bottom = 63.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Portrait" type="Sprite2D" parent="DialogueBox"]
+position = Vector2(72, 72)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("PlaceholderTexture2D_7db1c")
 
 [node name="Label" type="Label" parent="DialogueBox"]
 layout_mode = 0

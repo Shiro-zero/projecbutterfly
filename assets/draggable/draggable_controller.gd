@@ -103,7 +103,12 @@ func end_drag():
 			if basket:
 				print("basket existe")
 				#si il y a un stamp
-				if draggable_dragged.is_accepted != null:
+				if draggable_dragged.is_accepted == null:
+					$"../Stats/Mr_President".update_value(-5)
+					$"../Stats/Stress".update_value(5)
+					#ajouter message trump
+					draggable_dragged.knock_back()
+				else :
 					basket.drop_feuille_in_basket_animation(draggable_dragged)
 					#desactive la collision
 					draggable_dragged.get_node("Area2D").get_node("CollisionShape2D").disabled = true

@@ -15,6 +15,7 @@ var draggable
 var is_draggable_hovering
 var drag_offset = Vector2.ZERO
 var last_index = 1
+@onready var dialogue_manager = $"../DialogueControlleur"
 
 
 func _ready() -> void:
@@ -108,6 +109,7 @@ func end_drag():
 					$"../Stats/Stress".update_value(5)
 					#ajouter message trump
 					draggable_dragged.knock_back()
+					dialogue_manager.show_random_dialogue("trump", "tampon")
 				else :
 					basket.drop_feuille_in_basket_animation(draggable_dragged)
 					#desactive la collision

@@ -4,6 +4,8 @@ var preFeuille = preload("res://assets/feuille papier/feuille_papier.tscn")
 @onready var draggable_controller = $DraggableController
 
 func _ready():
+	
+	$DialogueControlleur.show_random_dialogue("trump", "debut_niveau")
 	spawn_loi(6)
 	
 	

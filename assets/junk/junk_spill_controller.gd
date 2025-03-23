@@ -11,7 +11,7 @@ var number_of_junk = 5
 func _ready():
 	add_child(junk_timer)
 	junk_timer.one_shot = true
-	var delay = randf_range(5.0, 10.0) # entre 1 et 3 secondes par exemple
+	var delay = randf_range(99999.0, 99999.0) # entre 1 et 3 secondes par exemple
 	junk_timer.start(delay)
 	junk_timer.timeout.connect(_random_spawn_junk)
 	

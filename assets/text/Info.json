@@ -1,0 +1,30 @@
+{
+	"0": {
+		"0" : {
+			"stat" : {
+				"plus" : "O+ T+++++++",
+				"less" : "T"
+			},
+			"titre" : "Lol",
+			"text" : "LolLolLolLolLolLolLolLolLolLolLolLolLolLolLolLolLolLol",
+		},
+		
+		"1" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Lol",
+			"text" : "LolLolLolLolLolLolLolLolLolLolLolLolLolLolLolLolLolLol",
+		},
+		
+		"2" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Lol",
+			"text" : "LolLolLolLolLolLolLolLolLolLolLolLolLolLolLolLolLolLol",
+		},
+	},
+}

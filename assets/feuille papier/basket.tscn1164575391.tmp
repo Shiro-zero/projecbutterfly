@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cpsaq6p31kn0e" path="res://assets/feuille papier/basket.gd" id="1_kq18k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
-size = Vector2(593.5, 796)
+size = Vector2(547, 730)
 
 [node name="Basket" type="Node2D"]
 script = ExtResource("1_kq18k")
@@ -12,8 +12,8 @@ script = ExtResource("1_kq18k")
 z_index = -3
 offset_left = -263.0
 offset_top = -365.0
-offset_right = 327.0
-offset_bottom = 433.0
+offset_right = 278.0
+offset_bottom = 367.0
 color = Color(0.728382, 0.437667, 0.152643, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -21,5 +21,5 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(27.25, 37)
+position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_aqk2v")

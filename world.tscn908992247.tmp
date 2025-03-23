@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://caobt1w4cxy2p"]
+[gd_scene load_steps=8 format=3 uid="uid://b1p82l7ww21hu"]
 
 [ext_resource type="Script" uid="uid://c5kj5bflmiusr" path="res://script/world.gd" id="1_aqk2v"]
 [ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://assets/draggable/draggable_controller.gd" id="2_tlwt5"]
@@ -6,34 +6,30 @@
 [ext_resource type="PackedScene" uid="uid://dt762xg0eehs" path="res://assets/stamp/dock_stamp.tscn" id="4_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://bqmq4sw1xbvp" path="res://Hamburger_icon.svg.png" id="5_036b0"]
 [ext_resource type="PackedScene" uid="uid://w64cls1upc1n" path="res://Jauge.tscn" id="5_dwbse"]
-[ext_resource type="Texture2D" uid="uid://c8xk4cxv6e1uw" path="res://assets/img/5.png" id="7_gbfbk"]
-[ext_resource type="Script" uid="uid://01wyumx2o1ne" path="res://assets/junk/junk_spill_controller.gd" id="7_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://cfjl87e64tojm" path="res://assets/feuille papier/basket.tscn" id="7_pkg7o"]
 
-[node name="World" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="World" type="Node2D"]
 script = ExtResource("1_aqk2v")
-metadata/_edit_lock_ = true
 
 [node name="DraggableController" type="Node2D" parent="."]
 script = ExtResource("2_tlwt5")
 
 [node name="DockStamp" parent="DraggableController" instance=ExtResource("4_aqk2v")]
-position = Vector2(250, 914)
+position = Vector2(881, 578)
 
 [node name="DockStamp2" parent="DraggableController" instance=ExtResource("4_aqk2v")]
-position = Vector2(455, 913)
+position = Vector2(1086, 577)
 color = "red"
 
 [node name="Stamp" parent="DraggableController" instance=ExtResource("3_aqk2v")]
-position = Vector2(255, 912)
+position = Vector2(882, 597)
 
 [node name="Stamp2" parent="DraggableController" instance=ExtResource("3_aqk2v")]
 position = Vector2(1088, 598)
 is_accepted_stamp = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(956, 542)
+position = Vector2(575, 326)
 
 [node name="Stats" type="CanvasLayer" parent="."]
 
@@ -80,19 +76,8 @@ offset_top = 262.0
 offset_right = 69.0
 offset_bottom = 318.0
 icon = ExtResource("5_036b0")
-metadata/_edit_use_anchors_ = true
 
-[node name="background" type="Sprite2D" parent="."]
-z_index = -100
-position = Vector2(958.5, 559)
-scale = Vector2(2.5013, 1.98214)
-texture = ExtResource("7_gbfbk")
-metadata/_edit_lock_ = true
-
-[node name="JunkSpillController" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("7_pkg7o")
+[node name="Basket" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(389, 22)
 
 [connection signal="pressed" from="Accueil_btn/Accueil" to="." method="_on_accueil_pressed"]

@@ -17,3 +17,6 @@ func _ready() -> void:
 	var sb = StyleBoxFlat.new()
 	bar.add_theme_stylebox_override("fill", sb)
 	sb.bg_color = Color(color)
+
+func update_value(nVal : int):
+	bar.value += nVal

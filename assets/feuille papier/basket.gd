@@ -1,5 +1,8 @@
 extends Node2D
 
+var scaleX = 1
+var scaleT = 1
+
 func drop_feuille_in_basket_animation(feuille):
 	print("animation")
 	var tween = create_tween()
@@ -9,4 +12,4 @@ func drop_feuille_in_basket_animation(feuille):
 	tween.tween_property(self, "rotation_degrees", 0.0, 1.0)
 
 
-	pass
+	feuille.applyStat()

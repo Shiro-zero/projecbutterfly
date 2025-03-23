@@ -67,6 +67,7 @@ func knock_back() -> void:
 		
 	tween.parallel().tween_property(self, "rotation_degrees", rotation_degrees + randi_range(-10, 10), 0.8)\
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		
 func get_journal_text():
 	if is_accepted:
 		return text.read("res://assets/text/info.json")[str(Global.day)][str(instance_index)]["journal"]["1"]

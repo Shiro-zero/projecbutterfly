@@ -58,6 +58,11 @@ func remove_garbage():
 		
 func change_day():
 	
+	$DraggableController.send_text_to_journal()
+	$Journal.update_texte()
+	$Journal.visible = true
+	await get_tree().create_timer(10).timeout 
+	
 	Global.day += 1
 	
 	var fatigue = $Stats/Fatigue

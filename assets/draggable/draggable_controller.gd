@@ -15,6 +15,7 @@ var draggable
 var is_draggable_hovering
 var drag_offset = Vector2.ZERO
 var last_index = 1
+var feuilles_remises = []
 @onready var dialogue_manager = $"../DialogueControlleur"
 
 
@@ -114,9 +115,9 @@ func end_drag():
 					dialogue_manager.show_random_dialogue("trump", "tampon")
 				else :
 					basket.drop_feuille_in_basket_animation(draggable_dragged)
+					feuilles_remises.append(draggable_dragged)
 					#desactive la collision
 					draggable_dragged.get_node("Area2D").get_node("CollisionShape2D").disabled = true
-					#mettre info journal ici
 					
 					
 		if draggable_dragged.position.x > 1920 or draggable_dragged.position.y > 1280 or draggable_dragged.position.x < 0 or draggable_dragged.position.y < -200:
@@ -124,10 +125,13 @@ func end_drag():
 				#draggable_dragged.position = Vector2(-100,-100)
 				draggable_dragged.queue_free()
 			draggable_dragged.position = starting_pos
-
+			
 		draggable_dragged = null
 		#ajouter logique de relache ici vérification d'ou il a été relaché
 		
+func send_text_to_journal():
+	$"../Journal".update_liste_feuille(feuilles_remises)
+	
 
 func highlight_draggable(drag, hover: bool):
 	#print(draggable)

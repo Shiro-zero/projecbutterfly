@@ -3,7 +3,7 @@
 	"0": {
 		"0" : {
 			"stat" : {
-				"plus" : "O+++++ T+++++++",
+				"plus" : "O T",
 				"less" : "T"
 			},
 			"titre" : "Loi sur l'hortographe",
@@ -12,8 +12,8 @@
 		
 		"1" : {
 			"stat" : {
-				"plus" : "T++",
-				"less" : "O---"
+				"plus" : "T",
+				"less" : "O"
 			},
 			"titre" : "interdiction de la couleur bune comme couleur de cheveux",
 			"text" : "haha vous devez faire des couleurs,... merde je suis brun",
@@ -29,8 +29,8 @@
 		},
 		"3" : {
 			"stat" : {
-				"plus" : "T+++++++",
-				"less" : "O-------------------"
+				"plus" : "T",
+				"less" : "O"
 			},
 			"titre" : "Réglementation sur la Promotion de l'Amour et de la Paix dans les Écoles",
 			"text" : "c'est maintenant interdit mwahaha",
@@ -38,7 +38,7 @@
 		
 		"4" : {
 			"stat" : {
-				"plus" : "O+++++++++",
+				"plus" : "O",
 				"less" : "T"
 			},
 			"titre" : "Loi sur la Promotion de la Douceur et de la Bienveillance Universelle",
@@ -47,8 +47,8 @@
 		
 		"5" : {
 			"stat" : {
-				"plus" : "O+++++++++",
-				"less" : "T--"
+				"plus" : "O",
+				"less" : "T"
 			},
 			"titre" : "Ordonnance sur la Création de Journées de Gratitude et de Reconnaissance",
 			"text" : "vive la santé mentale vous le méritez",

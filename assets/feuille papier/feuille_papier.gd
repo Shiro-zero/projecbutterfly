@@ -18,26 +18,30 @@ func applyStat():
 	var statsJauge = $"../../Stats"
 	statsJauge.get_child(1).update_value(5) # Augmente la fatigue
 	
-	var pArray = stats['plus'].split(" ")
-	var lArray = stats['less'].split(" ")
+	if "plus" in stats and "less" in stats:
+		var plus_str = stats["plus"] if stats["plus"] is String else ""
+		var less_str = stats["less"] if stats["less"] is String else ""
 	
-	for stat in pArray:
-		var value = (len(stat) + 1) * 5
-		
-		match(stat[0]):
-			"S" : statsJauge.get_child(0).update_value(value)
-			"F" : statsJauge.get_child(1).update_value(value)
-			"T" : statsJauge.get_child(2).update_value(value)
-			"O" : statsJauge.get_child(3).update_value(value)
+		var pArray = plus_str.split(" ") if plus_str else []
+		var lArray = less_str.split(" ") if less_str else []
+	
+		for stat in pArray:
+			var value = (len(stat) + 1) * 5
 			
-	for stat in lArray:
-		var value = (len(stat) + 1) * 5
-		
-		match(stat[0]):
-			"S" : statsJauge.get_child(0).update_value(-value)
-			"F" : statsJauge.get_child(1).update_value(-value)
-			"T" : statsJauge.get_child(2).update_value(-value)
-			"O" : statsJauge.get_child(3).update_value(-value)
+			match(stat[0]):
+				"S" : statsJauge.get_child(0).update_value(value)
+				"F" : statsJauge.get_child(1).update_value(value)
+				"T" : statsJauge.get_child(2).update_value(value)
+				"O" : statsJauge.get_child(3).update_value(value)
+				
+		for stat in lArray:
+			var value = (len(stat) + 1) * 5
+			
+			match(stat[0]):
+				"S" : statsJauge.get_child(0).update_value(-value)
+				"F" : statsJauge.get_child(1).update_value(-value)
+				"T" : statsJauge.get_child(2).update_value(-value)
+				"O" : statsJauge.get_child(3).update_value(-value)
 			
 func knock_back() -> void:
 	var tween = create_tween()

@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://caobt1w4cxy2p"]
+
+[ext_resource type="Script" uid="uid://c5kj5bflmiusr" path="res://script/world.gd" id="1_aqk2v"]
+[ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://assets/draggable/draggable_controller.gd" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://dkkg7ud4bqi17" path="res://assets/stamp/stamp.tscn" id="3_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://dt762xg0eehs" path="res://assets/stamp/dock_stamp.tscn" id="4_aqk2v"]
+[ext_resource type="Texture2D" uid="uid://bqmq4sw1xbvp" path="res://Hamburger_icon.svg.png" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://w64cls1upc1n" path="res://Jauge.tscn" id="5_dwbse"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_aqk2v")
+
+[node name="DraggableController" type="Node2D" parent="."]
+script = ExtResource("2_tlwt5")
+
+[node name="DockStamp" parent="DraggableController" instance=ExtResource("4_aqk2v")]
+position = Vector2(881, 578)
+
+[node name="DockStamp2" parent="DraggableController" instance=ExtResource("4_aqk2v")]
+position = Vector2(1086, 577)
+color = "red"
+
+[node name="Stamp" parent="DraggableController" instance=ExtResource("3_aqk2v")]
+position = Vector2(886, 576)
+
+[node name="Stamp2" parent="DraggableController" instance=ExtResource("3_aqk2v")]
+position = Vector2(357, 570)
+is_accepted_stamp = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 326)
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 892.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 257.0
+
+[node name="Stress" parent="Panel" instance=ExtResource("5_dwbse")]
+layout_mode = 1
+offset_left = 7.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = -177.0
+nom = "Stress"
+value = 20
+
+[node name="Fatigue" parent="Panel" instance=ExtResource("5_dwbse")]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 66.0
+offset_right = -11.0
+offset_bottom = -117.0
+nom = "Fatigue"
+value = 5
+color = "ad00a2"
+
+[node name="Mr_President" parent="Panel" instance=ExtResource("5_dwbse")]
+layout_mode = 1
+offset_left = 9.0
+offset_top = 124.0
+offset_right = -7.0
+offset_bottom = -59.0
+nom = "Mr. President"
+value = 70
+color = "d81f29"
+
+[node name="Opinion Publique" parent="Panel" instance=ExtResource("5_dwbse")]
+layout_mode = 1
+offset_left = 11.0
+offset_top = 183.0
+offset_right = -8.0
+offset_bottom = 3.0
+nom = "Opinion Publique"
+value = 50
+color = "00aef3"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Accueil" type="Button" parent="CanvasLayer"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+icon = ExtResource("5_036b0")
+
+[connection signal="pressed" from="CanvasLayer/Accueil" to="." method="_on_accueil_pressed"]

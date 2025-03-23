@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c71yuky3hsorq"]
+[gd_scene load_steps=4 format=3 uid="uid://bv316ei6hlejg"]
 
-[ext_resource type="Script" uid="uid://v8tbjsvwnp54" path="res://credit.gd" id="1_ynf4x"]
+[ext_resource type="Script" path="res://credit.gd" id="1_ynf4x"]
+[ext_resource type="Texture2D" uid="uid://dpphb0stafgca" path="res://assets/img/titlescreen.png" id="2_4qwwl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lthh4"]
 font_size = 36
@@ -18,18 +19,20 @@ script = ExtResource("1_ynf4x")
 position = Vector2(576, 324)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(1152, 648)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 781.0
+offset_top = 442.0
+offset_right = 1179.0
+offset_bottom = 908.0
 color = Color(0.512023, 0.535367, 0.570889, 1)
 
 [node name="Titre" type="Label" parent="."]
 custom_minimum_size = Vector2(1152, 0)
 layout_mode = 2
-offset_top = 175.0
-offset_right = 1152.0
-offset_bottom = 206.0
+offset_left = 401.0
+offset_top = 471.0
+offset_right = 1553.0
+offset_bottom = 521.0
 text = "Project Butterfly"
 label_settings = SubResource("LabelSettings_lthh4")
 horizontal_alignment = 1
@@ -37,9 +40,10 @@ horizontal_alignment = 1
 [node name="Names" type="Label" parent="."]
 custom_minimum_size = Vector2(1152, 0)
 layout_mode = 2
-offset_top = 292.0
-offset_right = 1152.0
-offset_bottom = 456.0
+offset_left = 401.0
+offset_top = 588.0
+offset_right = 1553.0
+offset_bottom = 752.0
 text = "Jean-Loup
 Antoine
 Matéo"
@@ -49,10 +53,17 @@ horizontal_alignment = 1
 [node name="Revenir" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-offset_left = 393.0
-offset_top = 535.0
-offset_right = 759.0
-offset_bottom = 577.0
+offset_left = 794.0
+offset_top = 831.0
+offset_right = 1160.0
+offset_bottom = 873.0
 text = "Revenir"
+
+[node name="Titlescreen" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(965.5, 604.375)
+scale = Vector2(1.953, 1.953)
+texture = ExtResource("2_4qwwl")
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Revenir" to="." method="_on_revenir_pressed"]

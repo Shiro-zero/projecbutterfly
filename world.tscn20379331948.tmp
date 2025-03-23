@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://caobt1w4cxy2p"]
+[gd_scene load_steps=8 format=3 uid="uid://caobt1w4cxy2p"]
 
 [ext_resource type="Script" uid="uid://c5kj5bflmiusr" path="res://script/world.gd" id="1_aqk2v"]
 [ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://assets/draggable/draggable_controller.gd" id="2_tlwt5"]
@@ -6,93 +6,90 @@
 [ext_resource type="PackedScene" uid="uid://dt762xg0eehs" path="res://assets/stamp/dock_stamp.tscn" id="4_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://bqmq4sw1xbvp" path="res://Hamburger_icon.svg.png" id="5_036b0"]
 [ext_resource type="PackedScene" uid="uid://w64cls1upc1n" path="res://Jauge.tscn" id="5_dwbse"]
-[ext_resource type="Texture2D" uid="uid://c8xk4cxv6e1uw" path="res://assets/img/5.png" id="7_gbfbk"]
 [ext_resource type="Script" uid="uid://01wyumx2o1ne" path="res://assets/junk/junk_spill_controller.gd" id="7_pkg7o"]
 
-[node name="World" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="World" type="Node2D"]
 script = ExtResource("1_aqk2v")
-metadata/_edit_lock_ = true
 
 [node name="DraggableController" type="Node2D" parent="."]
 script = ExtResource("2_tlwt5")
 
 [node name="DockStamp" parent="DraggableController" instance=ExtResource("4_aqk2v")]
-position = Vector2(250, 914)
+position = Vector2(881, 578)
 
 [node name="DockStamp2" parent="DraggableController" instance=ExtResource("4_aqk2v")]
-position = Vector2(455, 913)
+position = Vector2(1086, 577)
 color = "red"
 
 [node name="Stamp" parent="DraggableController" instance=ExtResource("3_aqk2v")]
-position = Vector2(255, 912)
+position = Vector2(886, 576)
 
 [node name="Stamp2" parent="DraggableController" instance=ExtResource("3_aqk2v")]
-position = Vector2(1088, 598)
+position = Vector2(357, 570)
 is_accepted_stamp = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(956, 542)
+position = Vector2(575, 326)
 
-[node name="Stats" type="CanvasLayer" parent="."]
+[node name="Panel" type="Panel" parent="."]
+offset_left = 892.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 257.0
 
-[node name="Stress" parent="Stats" instance=ExtResource("5_dwbse")]
+[node name="Stress" parent="Panel" instance=ExtResource("5_dwbse")]
+layout_mode = 1
 offset_left = 7.0
 offset_top = 2.0
-offset_right = -1655.0
-offset_bottom = -1010.0
+offset_right = -3.0
+offset_bottom = -177.0
 nom = "Stress"
 value = 20
 
-[node name="Fatigue" parent="Stats" instance=ExtResource("5_dwbse")]
+[node name="Fatigue" parent="Panel" instance=ExtResource("5_dwbse")]
+layout_mode = 1
 offset_left = 10.0
 offset_top = 66.0
-offset_right = -1664.0
-offset_bottom = -941.0
+offset_right = -11.0
+offset_bottom = -117.0
 nom = "Fatigue"
 value = 5
 color = "ad00a2"
 
-[node name="Mr_President" parent="Stats" instance=ExtResource("5_dwbse")]
+[node name="Mr_President" parent="Panel" instance=ExtResource("5_dwbse")]
+layout_mode = 1
 offset_left = 9.0
 offset_top = 124.0
-offset_right = -1663.0
-offset_bottom = -882.0
+offset_right = -7.0
+offset_bottom = -59.0
 nom = "Mr. President"
 value = 70
 color = "d81f29"
 
-[node name="Opinion Publique" parent="Stats" instance=ExtResource("5_dwbse")]
+[node name="Opinion Publique" parent="Panel" instance=ExtResource("5_dwbse")]
+layout_mode = 1
 offset_left = 11.0
 offset_top = 183.0
-offset_right = -1667.0
-offset_bottom = -823.0
+offset_right = -8.0
+offset_bottom = 3.0
 nom = "Opinion Publique"
 value = 50
 color = "00aef3"
 
-[node name="Accueil_btn" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Accueil" type="Button" parent="Accueil_btn"]
-offset_left = 13.0
-offset_top = 262.0
-offset_right = 69.0
-offset_bottom = 318.0
+[node name="Accueil" type="Button" parent="CanvasLayer"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
 icon = ExtResource("5_036b0")
-metadata/_edit_use_anchors_ = true
 
-[node name="background" type="Sprite2D" parent="."]
-z_index = -100
-position = Vector2(958.5, 559)
-scale = Vector2(2.5013, 1.98214)
-texture = ExtResource("7_gbfbk")
-metadata/_edit_lock_ = true
-
-[node name="JunkSpillController" type="Control" parent="."]
+[node name="junk_spill_controller" type="Control" parent="."]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("7_pkg7o")
 
-[connection signal="pressed" from="Accueil_btn/Accueil" to="." method="_on_accueil_pressed"]
+[connection signal="pressed" from="CanvasLayer/Accueil" to="." method="_on_accueil_pressed"]

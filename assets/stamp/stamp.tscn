@@ -24,4 +24,5 @@ position = Vector2(-3.5, 11.5)
 shape = SubResource("RectangleShape2D_pkg7o")
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
+volume_db = 24.0
 bus = &"sfx"

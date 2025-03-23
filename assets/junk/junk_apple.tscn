@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://w2l0yl1kwvbc" path="res://assets/junk/junk.gd" id="1_klxek"]
 [ext_resource type="AudioStream" uid="uid://bcnben4jowh44" path="res://sfx/Stamp.wav" id="2_bdmx1"]
-[ext_resource type="Texture2D" path="res://assets/junk/apple.png" id="3_xidsc"]
+[ext_resource type="Texture2D" uid="uid://dxjqauvccy0ot" path="res://assets/junk/apple.png" id="3_xidsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8rgx"]
 size = Vector2(242, 224)

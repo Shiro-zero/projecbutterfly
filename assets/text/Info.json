@@ -8,6 +8,10 @@
 			},
 			"titre" : "Loi sur l'hortographe",
 			"text" : "les faute d'hortographe ne doivent plus etre pénaliser ",
+			"journal" :{
+				"0" : "Les enfants ne passent pas les cours",
+				"1" : "Les enfants sont rendu illetrés",
+			}, 
 		},
 		
 		"1" : {
@@ -17,6 +21,10 @@
 			},
 			"titre" : "interdiction de la couleur bune comme couleur de cheveux",
 			"text" : "haha vous devez faire des couleurs,... merde je suis brun",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
 		},
 		
 		"2" : {
@@ -26,6 +34,10 @@
 			},
 			"titre" : "plus de nouille a midi",
 			"text" : "miam miam les nouiles",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
 		},
 		"3" : {
 			"stat" : {
@@ -34,6 +46,10 @@
 			},
 			"titre" : "Réglementation sur la Promotion de l'Amour et de la Paix dans les Écoles",
 			"text" : "c'est maintenant interdit mwahaha",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
 		},
 		
 		"4" : {
@@ -43,6 +59,10 @@
 			},
 			"titre" : "Loi sur la Promotion de la Douceur et de la Bienveillance Universelle",
 			"text" : "vive l'amour on vie dans le monde des bisounours(calinours?)",
+			"journal" :{
+				"0" : "Le gouvernement refuse les calins!",
+				"1" : "Profusion de prédateur autours des écoles primaires",
+			},
 		},
 		
 		"5" : {
@@ -52,6 +72,10 @@
 			},
 			"titre" : "Ordonnance sur la Création de Journées de Gratitude et de Reconnaissance",
 			"text" : "vive la santé mentale vous le méritez",
+			"journal" :{
+				"0" : "Le gouvernement veut la guerre",
+				"1" : "Le gouvernement est rendu incompétent",
+			},
 		},
 	},
 }

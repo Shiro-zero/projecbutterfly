@@ -82,21 +82,21 @@ func end_drag():
 		highlight_draggable(draggable_dragged, false)
 		draggable_dragged.drop_sound()
 		if draggable_dragged.is_in_group("stamp"):
-			print("drop stamp")
+			#print("drop stamp")
 			var feuille = raycast_check(COLLISION_MASK_FEUILLE)
 			if feuille:
-				print("stamp feuille")
+				#print("stamp feuille")
 				draggable_dragged.stamp(feuille)
 			else:
 				var dock = raycast_check(COLLISION_MASK_STAMP_DOCK)
 				if dock:
-					print(dock)
+					#print(dock)
 					if dock.color == "green" && draggable_dragged.is_accepted_stamp:
 						draggable_dragged.is_charged = true
-						print('recharge vert')
+						#print('recharge vert')
 					elif dock.color == "red" && !draggable_dragged.is_accepted_stamp:
 						draggable_dragged.is_charged = true
-						print('recharge rouge')
+						#print('recharge rouge')
 					pass
 		if draggable_dragged.is_in_group("feuille"):
 			var tween = create_tween()
@@ -104,7 +104,7 @@ func end_drag():
 			draggable_dragged.rotation=target_rotation
 			var basket = raycast_check(COLLISION_MASK_BASKET)
 			if basket:
-				print("basket existe")
+				#print("basket existe")
 				#si il y a un stamp
 				if draggable_dragged.is_accepted == null:
 					$"../Stats/Mr_President".update_value(-5)

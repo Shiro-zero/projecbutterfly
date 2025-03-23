@@ -22,3 +22,6 @@ position = Vector2(4, -67)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-3.5, 11.5)
 shape = SubResource("RectangleShape2D_pkg7o")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+bus = &"sfx"

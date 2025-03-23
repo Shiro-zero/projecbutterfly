@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://caobt1w4cxy2p"]
+[gd_scene load_steps=13 format=3 uid="uid://caobt1w4cxy2p"]
 
 [ext_resource type="Script" uid="uid://c5kj5bflmiusr" path="res://script/world.gd" id="1_aqk2v"]
 [ext_resource type="Script" uid="uid://ckg7jxs3yk8bw" path="res://assets/draggable/draggable_controller.gd" id="2_tlwt5"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://01wyumx2o1ne" path="res://assets/junk/junk_spill_controller.gd" id="7_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://cfjl87e64tojm" path="res://assets/feuille papier/basket.tscn" id="9_ioo17"]
 [ext_resource type="PackedScene" uid="uid://ous6lld5rewm" path="res://assets/dialogue/dialogue_controlleur.tscn" id="10_wse8f"]
+[ext_resource type="Script" uid="uid://r5cwpj5dq5q1" path="res://audio_stream_player.gd" id="11_ic0uy"]
+[ext_resource type="AudioStream" uid="uid://bitrsylbiv2if" path="res://sfx/Ambianca Bureau.mp3" id="11_k3n1d"]
 
 [node name="World" type="Control"]
 layout_mode = 3
@@ -102,5 +104,11 @@ position = Vector2(1577, -70)
 
 [node name="DialogueControlleur" parent="." instance=ExtResource("10_wse8f")]
 position = Vector2(942, 77)
+
+[node name="BackgroundNoise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_k3n1d")
+autoplay = true
+parameters/looping = true
+script = ExtResource("11_ic0uy")
 
 [connection signal="pressed" from="Accueil_btn/Accueil" to="." method="_on_accueil_pressed"]

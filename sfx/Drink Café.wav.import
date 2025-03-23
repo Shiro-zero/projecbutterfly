@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://j5uf7osj5qdp"
+path="res://.godot/imported/Drink Café.wav-3ef98f461ddf4db5ac65b5291957a84f.sample"
+
+[deps]
+
+source_file="res://sfx/Drink Café.wav"
+dest_files=["res://.godot/imported/Drink Café.wav-3ef98f461ddf4db5ac65b5291957a84f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,13 +1,13 @@
 extends Node
 
 func generate_text(i : int):
-	return(read("res://assets/text/tbody.json")[str(Global.day)][str(i)])
+	return(read("res://assets/text/info.json")[str(Global.day)][str(i)]["text"])
 
 func generate_title(i : int):
-	return(read("res://assets/text/titre.json")[str(Global.day)][(str(i))])
+	return(read("res://assets/text/info.json")[str(Global.day)][str(i)]["titre"])
 
 func generate_stat(i : int):
-	return(read("res://assets/text/stats.json")[str(Global.day)][(str(i))])
+	return(read("res://assets/text/info.json")[str(Global.day)][str(i)]["stat"])
 	
 func read(file_path):
 	# Check if the file exists

@@ -78,6 +78,6 @@ offset_bottom = 318.0
 icon = ExtResource("5_036b0")
 
 [node name="Basket" parent="." instance=ExtResource("7_pkg7o")]
-position = Vector2(478, -48)
+position = Vector2(389, 22)
 
 [connection signal="pressed" from="Accueil_btn/Accueil" to="." method="_on_accueil_pressed"]

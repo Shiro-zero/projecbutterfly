@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://w64cls1upc1n"]
 
-[ext_resource type="Script" uid="uid://c774vd5d1yk4v" path="res://jauge.gd" id="1_nqg2a"]
+[ext_resource type="Script" uid="uid://b00hp6ih7l5f7" path="res://jauge.gd" id="1_nqg2a"]
 
 [node name="Jauge" type="Control"]
 layout_mode = 3

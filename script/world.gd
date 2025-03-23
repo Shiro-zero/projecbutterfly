@@ -8,8 +8,6 @@ func _ready():
 	$DialogueControlleur.show_random_dialogue("trump", "debut_niveau")
 	spawn_loi(6)
 	
-	
-	
 func spawn_loi(n:int):
 	for i in range(n):
 		var temp = preFeuille.instantiate()

@@ -40,7 +40,7 @@ func applyStat():
 		var lArray = less_str.split(" ") if less_str else []
 	
 		for stat in pArray:
-			var value = (len(stat) + 1) * 5
+			var value = (len(stat) + 1) 
 			
 			match(stat[0]):
 				"S" : statsJauge.get_child(0).update_value(value)

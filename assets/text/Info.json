@@ -3,7 +3,7 @@
 	"0": {
 		"0" : {
 			"stat" : {
-				"plus" : "O T",
+				"plus" : "O++ T++++",
 				"less" : "T"
 			},
 			"titre" : "Loi sur l'hortographe",
@@ -16,14 +16,482 @@
 		
 		"1" : {
 			"stat" : {
-				"plus" : "T",
-				"less" : "O"
+				"plus" : "T+",
+				"less" : "O----"
 			},
 			"titre" : "interdiction de la couleur bune comme couleur de cheveux",
 			"text" : "haha vous devez faire des couleurs,... merde je suis brun",
 			"journal" :{
 				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
 				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		
+		"2" : {
+			"stat" : {
+				"plus" : "T+",
+				"less" : "O---"
+			},
+			"titre" : "plus de nouille a midi",
+			"text" : "miam miam les nouiles",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		"3" : {
+			"stat" : {
+				"plus" : "T+++",
+				"less" : "O----------"
+			},
+			"titre" : "Réglementation sur la Promotion de l'Amour et de la Paix dans les Écoles",
+			"text" : "c'est maintenant interdit mwahaha",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		
+		"4" : {
+			"stat" : {
+				"plus" : "O+++",
+				"less" : "T---------"
+			},
+			"titre" : "Loi sur la Promotion de la Douceur et de la Bienveillance Universelle",
+			"text" : "vive l'amour on vie dans le monde des bisounours(calinours?)",
+			"journal" :{
+				"0" : "Le gouvernement refuse les calins!",
+				"1" : "Profusion de prédateur autours des écoles primaires",
+			},
+		},
+		
+		"5" : {
+			"stat" : {
+				"plus" : "O++++++",
+				"less" : "T--"
+			},
+			"titre" : "Ordonnance sur la Création de Journées de Gratitude et de Reconnaissance",
+			"text" : "vive la santé mentale vous le méritez",
+			"journal" :{
+				"0" : "Le gouvernement veut la guerre",
+				"1" : "Le gouvernement est rendu incompétent",
+			},
+		},
+	},
+	"1": {
+		"0" : {
+			"stat" : {
+				"plus" : "O++++++ ",
+				"less" : "T+++"
+			},
+			"titre" : "création d'un budjet de 100k$ pour les dévelopeur indépendent",
+			"text" : "nous devons créé des oportunité pour nos dévelopeur",
+			"journal" :{
+				"0" : "les developeur en grève",
+				"1" : "des centaine de jeux indée remporte des trophée, les companie AAA en déclain",
+			}, 
+		},
+		
+		"1" : {
+			"stat" : {
+				"plus" : "T+++",
+				"less" : "O---"
+			},
+			"titre" : "budget de 50k$ pour réparé les photocopieuse de l'assemblé ",
+			"text" : "on en a besoin pour faire avencer nos politique",
+			"journal" :{
+				"0" : "le gouvernemnt a l'arret sans leurs chère imprimente",
+				"1" : "les companie d'impriment font fortune de plus en plus",
+			},
+		},
+		
+		"2" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "plus de nouille a midi",
+			"text" : "miam miam les nouiles",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		"3" : {
+			"stat" : {
+				"plus" : "T",
+				"less" : "O"
+			},
+			"titre" : "Réglementation sur la Promotion de l'Amour et de la Paix dans les Écoles",
+			"text" : "c'est maintenant interdit mwahaha",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		
+		"4" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Loi sur la Promotion de la Douceur et de la Bienveillance Universelle",
+			"text" : "vive l'amour on vie dans le monde des bisounours(calinours?)",
+			"journal" :{
+				"0" : "Le gouvernement refuse les calins!",
+				"1" : "Profusion de prédateur autours des écoles primaires",
+			},
+		},
+		
+		"5" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Ordonnance sur la Création de Journées de Gratitude et de Reconnaissance",
+			"text" : "vive la santé mentale vous le méritez",
+			"journal" :{
+				"0" : "Le gouvernement veut la guerre",
+				"1" : "Le gouvernement est rendu incompétent",
+			},
+		},
+	},
+	"2": {
+		"0" : {
+			"stat" : {
+				"plus" : "O++++++ ",
+				"less" : "T+++"
+			},
+			"titre" : "création d'un budjet de 100k$ pour les dévelopeur indépendent",
+			"text" : "nous devons créé des oportunité pour nos dévelopeur",
+			"journal" :{
+				"0" : "les developeur en grève",
+				"1" : "des centaine de jeux indée remporte des trophée, les companie AAA en déclain",
+			}, 
+		},
+		
+		"1" : {
+			"stat" : {
+				"plus" : "T+++",
+				"less" : "O---"
+			},
+			"titre" : "budget de 50k$ pour réparé les photocopieuse de l'assemblé ",
+			"text" : "on en a besoin pour faire avencer nos politique",
+			"journal" :{
+				"0" : "le gouvernemnt a l'arret sans leurs chère imprimente",
+				"1" : "les companie d'impriment font fortune de plus en plus",
+			},
+		},
+		
+		"2" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "plus de nouille a midi",
+			"text" : "miam miam les nouiles",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		"3" : {
+			"stat" : {
+				"plus" : "T",
+				"less" : "O"
+			},
+			"titre" : "Réglementation sur la Promotion de l'Amour et de la Paix dans les Écoles",
+			"text" : "c'est maintenant interdit mwahaha",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		
+		"4" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Loi sur la Promotion de la Douceur et de la Bienveillance Universelle",
+			"text" : "vive l'amour on vie dans le monde des bisounours(calinours?)",
+			"journal" :{
+				"0" : "Le gouvernement refuse les calins!",
+				"1" : "Profusion de prédateur autours des écoles primaires",
+			},
+		},
+		
+		"5" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Ordonnance sur la Création de Journées de Gratitude et de Reconnaissance",
+			"text" : "vive la santé mentale vous le méritez",
+			"journal" :{
+				"0" : "Le gouvernement veut la guerre",
+				"1" : "Le gouvernement est rendu incompétent",
+			},
+		},
+	},	
+	"3": {
+		"0" : {
+			"stat" : {
+				"plus" : "O++++++ ",
+				"less" : "T+++"
+			},
+			"titre" : "création d'un budjet de 100k$ pour les dévelopeur indépendent",
+			"text" : "nous devons créé des oportunité pour nos dévelopeur",
+			"journal" :{
+				"0" : "les developeur en grève",
+				"1" : "des centaine de jeux indée remporte des trophée, les companie AAA en déclain",
+			}, 
+		},
+		
+		"1" : {
+			"stat" : {
+				"plus" : "T+++",
+				"less" : "O---"
+			},
+			"titre" : "budget de 50k$ pour réparé les photocopieuse de l'assemblé ",
+			"text" : "on en a besoin pour faire avencer nos politique",
+			"journal" :{
+				"0" : "le gouvernemnt a l'arret sans leurs chère imprimente",
+				"1" : "les companie d'impriment font fortune de plus en plus",
+			},
+		},
+		
+		"2" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "plus de nouille a midi",
+			"text" : "miam miam les nouiles",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		"3" : {
+			"stat" : {
+				"plus" : "T",
+				"less" : "O"
+			},
+			"titre" : "Réglementation sur la Promotion de l'Amour et de la Paix dans les Écoles",
+			"text" : "c'est maintenant interdit mwahaha",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		
+		"4" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Loi sur la Promotion de la Douceur et de la Bienveillance Universelle",
+			"text" : "vive l'amour on vie dans le monde des bisounours(calinours?)",
+			"journal" :{
+				"0" : "Le gouvernement refuse les calins!",
+				"1" : "Profusion de prédateur autours des écoles primaires",
+			},
+		},
+		
+		"5" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Ordonnance sur la Création de Journées de Gratitude et de Reconnaissance",
+			"text" : "vive la santé mentale vous le méritez",
+			"journal" :{
+				"0" : "Le gouvernement veut la guerre",
+				"1" : "Le gouvernement est rendu incompétent",
+			},
+		},
+	},	
+	"4": {
+		"0" : {
+			"stat" : {
+				"plus" : "O++++++ ",
+				"less" : "T+++"
+			},
+			"titre" : "création d'un budjet de 100k$ pour les dévelopeur indépendent",
+			"text" : "nous devons créé des oportunité pour nos dévelopeur",
+			"journal" :{
+				"0" : "les developeur en grève",
+				"1" : "des centaine de jeux indée remporte des trophée, les companie AAA en déclain",
+			}, 
+		},
+		
+		"1" : {
+			"stat" : {
+				"plus" : "T+++",
+				"less" : "O---"
+			},
+			"titre" : "budget de 50k$ pour réparé les photocopieuse de l'assemblé ",
+			"text" : "on en a besoin pour faire avencer nos politique",
+			"journal" :{
+				"0" : "le gouvernemnt a l'arret sans leurs chère imprimente",
+				"1" : "les companie d'impriment font fortune de plus en plus",
+			},
+		},
+		
+		"2" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "plus de nouille a midi",
+			"text" : "miam miam les nouiles",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		"3" : {
+			"stat" : {
+				"plus" : "T",
+				"less" : "O"
+			},
+			"titre" : "Réglementation sur la Promotion de l'Amour et de la Paix dans les Écoles",
+			"text" : "c'est maintenant interdit mwahaha",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		
+		"4" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Loi sur la Promotion de la Douceur et de la Bienveillance Universelle",
+			"text" : "vive l'amour on vie dans le monde des bisounours(calinours?)",
+			"journal" :{
+				"0" : "Le gouvernement refuse les calins!",
+				"1" : "Profusion de prédateur autours des écoles primaires",
+			},
+		},
+		
+		"5" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Ordonnance sur la Création de Journées de Gratitude et de Reconnaissance",
+			"text" : "vive la santé mentale vous le méritez",
+			"journal" :{
+				"0" : "Le gouvernement veut la guerre",
+				"1" : "Le gouvernement est rendu incompétent",
+			},
+		},
+	},	
+	"5": {
+		"0" : {
+			"stat" : {
+				"plus" : "O++++++ ",
+				"less" : "T+++"
+			},
+			"titre" : "création d'un budjet de 100k$ pour les dévelopeur indépendent",
+			"text" : "nous devons créé des oportunité pour nos dévelopeur",
+			"journal" :{
+				"0" : "les developeur en grève",
+				"1" : "des centaine de jeux indée remporte des trophée, les companie AAA en déclain",
+			}, 
+		},
+		
+		"1" : {
+			"stat" : {
+				"plus" : "T+++",
+				"less" : "O---"
+			},
+			"titre" : "budget de 50k$ pour réparé les photocopieuse de l'assemblé ",
+			"text" : "on en a besoin pour faire avencer nos politique",
+			"journal" :{
+				"0" : "le gouvernemnt a l'arret sans leurs chère imprimente",
+				"1" : "les companie d'impriment font fortune de plus en plus",
+			},
+		},
+		
+		"2" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "plus de nouille a midi",
+			"text" : "miam miam les nouiles",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		"3" : {
+			"stat" : {
+				"plus" : "T",
+				"less" : "O"
+			},
+			"titre" : "Réglementation sur la Promotion de l'Amour et de la Paix dans les Écoles",
+			"text" : "c'est maintenant interdit mwahaha",
+			"journal" :{
+				"0" : "Les master race aux cheveux bruns prennent de l'empleur!",
+				"1" : "Discrimination envers les cheveux bruns",
+			},
+		},
+		
+		"4" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Loi sur la Promotion de la Douceur et de la Bienveillance Universelle",
+			"text" : "vive l'amour on vie dans le monde des bisounours(calinours?)",
+			"journal" :{
+				"0" : "Le gouvernement refuse les calins!",
+				"1" : "Profusion de prédateur autours des écoles primaires",
+			},
+		},
+		
+		"5" : {
+			"stat" : {
+				"plus" : "O",
+				"less" : "T"
+			},
+			"titre" : "Ordonnance sur la Création de Journées de Gratitude et de Reconnaissance",
+			"text" : "vive la santé mentale vous le méritez",
+			"journal" :{
+				"0" : "Le gouvernement veut la guerre",
+				"1" : "Le gouvernement est rendu incompétent",
+			},
+		},
+	},	
+	"6": {
+		"0" : {
+			"stat" : {
+				"plus" : "O++++++ ",
+				"less" : "T+++"
+			},
+			"titre" : "création d'un budjet de 100k$ pour les dévelopeur indépendent",
+			"text" : "nous devons créé des oportunité pour nos dévelopeur",
+			"journal" :{
+				"0" : "les developeur en grève",
+				"1" : "des centaine de jeux indée remporte des trophée, les companie AAA en déclain",
+			}, 
+		},
+		
+		"1" : {
+			"stat" : {
+				"plus" : "T+++",
+				"less" : "O---"
+			},
+			"titre" : "budget de 50k$ pour réparé les photocopieuse de l'assemblé ",
+			"text" : "on en a besoin pour faire avencer nos politique",
+			"journal" :{
+				"0" : "le gouvernemnt a l'arret sans leurs chère imprimente",
+				"1" : "les companie d'impriment font fortune de plus en plus",
 			},
 		},
 		
